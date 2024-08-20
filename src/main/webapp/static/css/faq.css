@@ -1,0 +1,117 @@
+@charset "UTF-8";
+body {
+            font-family: 'Pretendard', sans-serif;
+            align-items: center;
+            margin: 0;
+        padding: 0;
+            }
+            
+            
+            ul {
+            position:relative;
+            margin-top: 70px;
+        /*     right:40%;
+            bottom:70%; */
+		list-style:none;
+		
+		
+   	}
+ 	.li {
+		display:inline-block;
+		
+	}
+	.li a {
+		padding: 10px 25px;
+		font-size: 13px;
+		color: #000000;
+		text-decoration: none;
+	}
+	.button {
+		border: 1.5px solid #706363;
+		margin-right: -5px;
+		
+		
+	}
+	#a:hover {
+		background:#967748;
+		color:white;
+	}
+ 
+
+        .accordion {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 2px solid #967748;
+            border-bottom: 2px solid #967748;
+            margin-top:70px;
+            margin-bottom:70px;
+            
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #e2e2e2;
+            
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+            
+        }
+
+        .accordion-header {
+            padding: 15px;
+            font-size: 13px;
+            font-weight: bold;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            align: left;
+            align-items: center;
+            justify-content: space-between;
+         
+        }
+
+        .accordion-header::before {
+            content: "Q.";
+            color: #8b4e24;
+            margin-right: 10px;
+        }
+
+        .accordion-header.active::after {
+            content: "▲";
+            font-size: 12px;
+            color: #949494;
+        }
+
+        .accordion-header::after {
+            content: "▼";
+            font-size: 12px;
+            margin-left: 10px;
+            color: #949494;
+        }
+
+/* 		content는 기호만 넣을 수 있으므로 png 화살표를 넣고 싶으면 백그라운드로 넣어야함. */
+		
+		
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f7f7f7;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+
+        .accordion-content p {
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .accordion-header.active + .accordion-content {
+            max-height: 200px; /* 충분한 높이로 설정하여 내용이 펼쳐지도록 함 */
+            padding: 15px;
+            
+        }
+        
+       
