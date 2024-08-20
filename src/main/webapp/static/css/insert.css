@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+.container{
+position: relative;
+width: 1440px;
+height: 2625px;
+
+background: #FFFFFF;
+}
+
+/* 쿠킹일지 */
+.insert_main_title {
+position: absolute;
+width: 139px;
+height: 52px;
+left: 980px;
+top: 225px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 130%;
+/* identical to box height, or 52px */
+
+color: #000000;
+}
+
+/* 오늘의 쿠킹 일지 */
+.insert_title{
+    position: absolute;
+    width: 236px;
+    height: 47px;
+    left: 400px;
+    top: 370px;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+    
+    color: #0A0A0A;
+}
+
+/* Rectangle 341 */
+.main_insert_form {
+ 
+position: absolute;
+width: 1307px;
+height: 1155px;
+left: 400px;
+top: 441px;
+
+background: #FFFFFF;
+border: 2px solid #A4A4A4;
+border-radius: 16px;
+}
+
+/* 보더 안쪽 폼 */
+.insert_form {
+position: absolute;
+width: 937px;
+height: 1013.16px;
+left: -350px;
+top: -900px;
+}
+
+/* 제목 */
+.insert_form_title {
+position: absolute;
+width: 937px;
+height: 95.74px;
+left: 264px;
+top: 530px;
+}
+
+/* 사진, 굵기 박스 */
+.insert_title_form {
+position: absolute;
+width: 937px;
+height: 95.74px;
+left: 264px;
+top: 633.61px;
+
+background: rgba(230, 224, 227, 0.4);
+border: 1.10626px solid #D9D9D9;
+}
+
+/* 제목 박스 */
+.insert_sec_form {
+position: absolute;
+width: 937px;
+height: 72.59px;
+left: 530px;
+top: 1000px;
+
+background: rgba(230, 224, 227, 0.4);
+border: 1.10626px solid #D9D9D9;
+}
+
+/* 내용 */
+.insert_content_box {
+position: absolute;
+width: 933.68px;
+height: 734.36px;
+left: 500px;
+top: 100px;
+}
+
+/* 내용 박스 */
+.insert_content_form {
+position: absolute;
+width: 933.68px;
+height: 734.36px;
+left: 30px;
+top: 1200px;
+
+background: #FFFFFF;
+border: 2px solid #BEBEBE;
+}
+
+/* 사진 */
+.insert_image_content {
+position: absolute;
+width: 35px;
+height: 30px;
+left: 70px;
+top: -80px;
+
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16.5939px;
+line-height: 23px;
+
+color: #6F6F6F;
+}
+/* 이미지 */
+.insert_sec_image {
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    left: 65px;
+    top: 20px;
+}
+
+/* B */
+.insert_sec_bold {
+    position: absolute;
+    width: 22.13px;
+    height: 36.82px;
+    left: 153px;
+    top: 5px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 44.2503px;
+    line-height: 54px;
+    
+    color: #6F6F6F;
+    }
+
+/* 굵기 */
+.insert_sec_bold_content {
+position: absolute;
+width: 35px;
+height: 30px;
+left: 150px;
+top: -80px;
+
+font-family: 'Noto Sans';
+font-style: bold;
+font-weight: 600;
+font-size: 16.5939px;
+line-height: 23px;
+
+color: #6F6F6F;
+}
+
+/* 사이즈 15 */
+.insert_sec_size_content {
+position: absolute;
+width: auto;
+height: auto;
+left: 240px;
+top: 30px;
+
+border:none;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 22.1251px;
+line-height: 27px;
+
+color: #4E4E4E;
+}
+
+/* 작성 박스 */
+.insert_btn_box {
+box-sizing: border-box;
+
+position: absolute;
+width: 199px;
+height: 80px;
+left: 800px;
+top: 1620px;
+
+background-color: #FFFFFF;
+border: 1px solid #714E5E;
+border-radius: 18.84px;
+}
+
+/* 작성완료 */
+.insert_btn_content {
+position: absolute;
+width: auto;
+height: auto;
+left: 32px;
+top: 20px;
+
+font-family: 'Inter';
+font-style: none;
+font-weight: 400;
+font-size: 30px;
+line-height: 36px;
+border: none;
+background-color: none;
+
+color: #714E5E;
+}
+/* 목록 박스 */
+.list_btn_box {
+position: absolute;
+width: 199px;
+height: 80px;
+left: 1100px;
+top: 1620px;
+
+background: #714E5E;
+border-radius: 18.84px;
+
+}
+
+/* 목록 */
+.list_content {
+position: absolute;
+width: auto;
+height: auto;
+left: 64px;
+top: 20px;
+
+font-family: 'Inter';
+font-style: none;
+font-weight: 400;
+font-size: 30px;
+line-height: 36px;
+border: none;
+
+color: #FFFFFF;
+}
