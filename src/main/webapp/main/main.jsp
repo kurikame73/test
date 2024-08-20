@@ -10,6 +10,10 @@
   <jsp:include page="header.jsp" />
 
 <!-- banner  -->
+<section>
+<jsp:include page="banner.jsp"/>
+</section>
+
 <!-- images  -->
   <jsp:include page="footer.jsp" />
 </body>
