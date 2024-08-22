@@ -4,8 +4,7 @@
         font-family: 'Pretendard', sans-serif;
         margin: 0;
         padding: 0;
-      
-        
+		      
     }
 
     h2 {
@@ -21,7 +20,7 @@
         border: 1px solid #F2EADF;
         border-top: 2px solid #967748;
         border-bottom: 2px solid #967748;
-        background-color: #fff;
+        background-color: #fffff;
         
     }
 
@@ -32,6 +31,7 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #d1bfa7;
+        
     }
     
     .notice-header_none {
@@ -41,6 +41,7 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #d1bfa7;
+        background-color: #fffff;
     }
 
     .notice-header img {

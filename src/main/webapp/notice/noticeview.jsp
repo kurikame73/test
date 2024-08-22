@@ -13,7 +13,7 @@
     
     <div class="notice-container">
         <div class="notice-header">
-            <img src="resources/pin-angle.png" alt="Icon" width="24">
+            <img src="${pageContext.request.contextPath}/static/images/pin-angle.png" alt="Icon" width="24">
             <strong>2024.09.10 신규 출시 예정</strong>
         </div>
         <div class="notice-content">
@@ -51,6 +51,8 @@
 		          </td>
 		       </tr>
 		    </table> --%>
+		    <jsp:include page="/mypage/mypage_window.jsp" />
+		    <jsp:include page="/chat/chat.jsp" />
       <jsp:include page="/main/footer.jsp" />
 </body>
 </html>

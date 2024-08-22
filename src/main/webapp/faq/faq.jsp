@@ -38,6 +38,8 @@
 	
 	
 	 <script src="${pageContext.request.contextPath}/static/js/faq.js"></script>
-	     <jsp:include page="/main/footer.jsp" />
+	      <jsp:include page="/mypage/mypage_window.jsp" />
+	<jsp:include page="/chat/chat.jsp" />
+  	<jsp:include page="/main/footer.jsp" />
 </body>
 </html>
