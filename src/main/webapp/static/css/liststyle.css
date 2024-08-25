@@ -1,287 +1,359 @@
-@charset "utf-8";
-
-/* Ïø†ÌÇπÏùºÏßÄ - Î¶¨Ïä§Ìä∏ */
+/* ƒÌ≈∑¿œ¡ˆ - ∏ÆΩ∫∆Æ */
 .container{
-position: relative;
-width: 1440px;
-height: 2625px;
-
-background: #FFFFFF;
-}
-
-/* Í∏ÄÏì∞Í∏∞ Ìèº*/
-.community_write{
-position: absolute;
-width: 166px;
-height: 52.07px;
-left: 1200px;
-top: 2650px;
-}
-
-/* Í∏ÄÏì∞Í∏∞ Î∞ïÏä§ */
-.community_write_box {
-position: absolute;
-width: 166px;
-height: 52.07px;
-left: 20px;
-top: -440px;
-
-background: #5A5A5A;
-border-radius: 8.7995px;
-}
-
-/* Í∏ÄÏì∞Í∏∞ Í∏Ä */
-.community_write_content {
-position: absolute;
-width: 51px;
-height: 23px;
-left: 57px;
-top: 16px;
-
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: 19.6015px;
-line-height: 23px;
-
-color: #FFFFFF;
-}
-
-/* list form */
-.community_list_box {
-box-sizing: border-box;
-position: absolute;
-width: 1309px;
-height: 1018px;
-left: 90px;
-top: 1150px;
-
-}
-
-/* list box flex */
-.community_list_box1 {
-width: 100%;
-height: 100%;
-display: flex;
-background-color: #ffffff;
-border: 0.5px solid #000000;
-margin-bottom: 20px;
-}
-
-#opt1 {
-    align-items: start;
-}
-
-#opt2 {
-    align-items: center;
-}
-
-#opt3 {
-    align-items: end;
-}
-
-/* list12 ÏÇ¨ÏßÑ */
-.community_list12_image {
-position: absolute;
-width: 293.73px;
-height: 297.83px;
-left: 988px;
-top: 708px;
-
-border-radius: 12.9501px;
-}
-
-/* list11 ÏÇ¨ÏßÑ */
-.community_list11_image {
-position: absolute;
-width: 293.2px;
-height: 293.2px;
-left: 662px;
-top: 708px;
-
-border-radius: 5.40961px;
-}
-
-/* list10 ÏÇ¨ÏßÑ */
-.community_list10_image {
-    position: absolute;
-    width: 293.2px;
-    height: 293.2px;
-    left: 336px;
-    top: 708px;
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    max-width: 2440px;
+    justify-content: center;
     
-    border-radius: 5.40961px;
+    background: #FFFFFF;
     }
-
-/* list9 ÏÇ¨ÏßÑ */
-.community_list9_image {
-position: absolute;
-width: 293.2px;
-height: 293.2px;
-left: 10px;
-top: 708px;
-
-border-radius: 5.40961px;
-}
-
-/* list8 ÏÇ¨ÏßÑ */
-.community_list8_image {
-position: absolute;
-width: 292.91px;
-height: 297px;
-left: 988px;
-top: 369px;
-
-border-radius: 12.914px;
-}
-
-/* list7 ÏÇ¨ÏßÑ */
-.community_list7_image {
-position: absolute;
-width: 292.38px;
-height: 292.38px;
-left: 662px;
-top: 369px;
-
-border-radius: 5.39451px;
-}
-
-/* list6 ÏÇ¨ÏßÑ */
-.community_list6_image {
-position: absolute;
-width: 292.38px;
-height: 292.38px;
-left: 336px;
-top: 369px;
-
-border-radius: 5.39451px;
-}
-
-/* list5 ÏÇ¨ÏßÑ */
-.community_list5_image {
-position: absolute;
-width: 292.38px;
-height: 292.38px;
-left: 10px;
-top: 369px;
-
-border-radius: 5.39451px;
-}
-
-/* list4 ÏÇ¨ÏßÑ */
-.community_list4_image {
-position: absolute;
-width: 293.73px;
-height: 297.83px;
-left: 988px;
-top: 30px;
-
-border-radius: 12.9501px;
-}
-
-/* list3 ÏÇ¨ÏßÑ */
-.community_list3_image {
-position: absolute;
-width: 293.2px;
-height: 293.2px;
-left: 662px;
-top: 30px;
-
-border-radius: 5.40961px;
-}
-
-/* list2 ÏÇ¨ÏßÑ */
-.community_list2_image {
-position: absolute;
-width: 293.2px;
-height: 293.2px;
-left: 336px;
-top: 30px;
-
-border-radius: 5.40961px;
-}
-
-/* list1 ÏÇ¨ÏßÑ */
-.community_list1_image {
-position: absolute;
-width: 293.2px;
-height: 293.2px;
-left: 10px;
-top: 30px;
-
-border-radius: 5.40961px;
-}
-
-/* hot main2 */
-.community_mainlist2_box {
-position: absolute;
-width: 614.05px;
-height: 297px;
-left: 775px;
-top: 710px;
-
-border-radius: 10px;
-}
-
-/* hot main1 */
-.community_mainlist1_box {
-position: absolute;
-width: 614.05px;
-height: 297px;
-left: 110px;
-top: 710px;
-
-border-radius: 10px;
-}
-
-/* Î™®ÎùΩÎ™®ÎùΩÏø†ÌÇπÏùºÏßÄ */
-.community_content_box {
-position: absolute;
-width: 433px;
-height: 125px;
-left: 107px;
-top: 562px;
-}
-
-/* Î™®ÎùΩ Î™®ÎùΩ Ïø†ÌÇπ ÏùºÏßÄ */
-.community_contentbox_content1 {
-position: absolute;
-width: 366px;
-height: 62px;
-
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 130%;
-
-color: #000000;
-}
-
-/* Ïò§Îäò ÏÉàÎ°ú Ïò¨ÎùºÏò® ÏùºÏßÄÎäî 45Í∞ú! */
-.community_contentbox_content2 {
-position: absolute;
-width: 433px;
-top: 60px;
-
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 600;
-font-size: 36px;
-line-height: 130%;
-/* identical to box height, or 47px */
-
-color: #2EAE65;
-}
-
-.list_paging_table {
+    
+    /* ∞Àªˆ√¢ */
+    .search_bar{
+    position: absolute;
+    width: 40%;
+    height: 93px;
+    left: 27%;
+    top: 5%;
+    
+    background: #F8F6F3;
+    border-radius: 14.094px;
+    }
+    
+    .saerch_bar_content{
+        width: 40%;
+        height: 93px;
+        border:none;
+        background:none;
+        text-align:center;
+        justify-content:center;
+    }
+    
+    /* ∏∂Ù ∏∂Ù ƒÌ≈∑ ¿œ¡ˆ */
+    .main_title {
     position: absolute;
     width: auto;
     height: auto;
-    left: 600px;
-    top: 2220px;
-
-    font-size: 20px;
-}
-
-
+    left: 17%;
+    top: 5%;
+    
+    font-size: 32px;
+    font-weight: bold;
+    }
+    
+    /* ∏∂Ù∏∂ÙƒÌ≈∑¿œ¡ˆ */
+    .community_content_box {
+    position: absolute;
+    width: 433px;
+    height: 125px;
+    left: 10%;
+    top: 13%;
+    }
+    
+    /* ∏∂Ù ∏∂Ù ƒÌ≈∑ ¿œ¡ˆ */
+    .community_contentbox_content1 {
+    position: absolute;
+    width: 366px;
+    height: 62px;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    
+    color: #000000;
+    }
+    
+    /* ø¿¥√ ªı∑Œ ø√∂Ûø¬ ¿œ¡ˆ¥¬ 45∞≥! */
+    .community_contentbox_content2 {
+    position: absolute;
+    width: 433px;
+    top: 45%;
+    
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    
+    color: #2EAE65;
+    }
+    
+    /* hot main1 */
+    .community_mainlist1_box {
+    position: absolute;
+    width: 614.05px;
+    height: 297px;
+    left: 13%;
+    top: 20%;
+    
+    border: 1px solid #000000;
+    border-radius: 10px;
+    }
+    
+    /* hot main2 */
+    .community_mainlist2_box {
+    position: absolute;
+    width: 614.05px;
+    height: 297px;
+    left: 52%;
+    top: 20%;
+    
+    border: 1px solid #000000;
+    border-radius: 10px;
+    }
+    
+    
+    /* ±€æ≤±‚ ∆˚*/
+    .community_write{
+    position: absolute;
+    width: 166px;
+    height: 52.07px;
+    left: 73%;
+    top: 90%;
+    }
+    
+    /* ±€æ≤±‚ π⁄Ω∫ */
+    .community_write_box {
+    position: absolute;
+    width: 166px;
+    height: 52.07px;
+    left: 0%;
+    top: 50%;
+    
+    background: #706363;
+    border-radius: 8.7995px;
+    }
+    
+    /* ±€æ≤±‚ ±€ */
+    .community_write_content {
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    left: 33.5%;
+    top: 26%;
+    
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 19.6015px;
+    line-height: 23px;
+    border:none;
+    background:none;
+    color: #FFFFFF;
+    }
+    
+    /* list box form */
+    .community_list_box {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    left: auto;
+    top: 0%;
+    }
+    
+    /* list box */
+    .community_list_box1 {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    top: 80%;
+    
+    border-top: 3px solid #F8F6F3;
+    border-top: 3px solid #F8F6F3;
+    }
+    
+    #opt1 {
+        align-items: start;
+    }
+    
+    #opt2 {
+        align-items: center;
+    }
+    
+    #opt3 {
+        align-items: end;
+    }
+    
+    .view_main_content{
+    position: absolute;
+    width: auto;
+    height: 51px;
+    left: 20%;
+    top: 39%;
+    
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 25px;
+    color: #000000;
+    }
+    
+    /* selectbox */
+    .select_sort{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 79%;
+    top: 37%;
+    
+    border-radius: 13px;
+    }
+    
+    /* list1 ªÁ¡¯ */
+    .community_list1_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 12%;
+    top: 5%;
+    
+    text-align:center;
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list2 ªÁ¡¯ */
+    .community_list2_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 33%;
+    top: 5%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list3 ªÁ¡¯ */
+    .community_list3_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 54%;
+    top: 5%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list4 ªÁ¡¯ */
+    .community_list4_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 75%;
+    top: 5%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list5 ªÁ¡¯ */
+    .community_list5_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 12%;
+    top: 33%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list6 ªÁ¡¯ */
+    .community_list6_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 33%;
+    top: 33%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list7 ªÁ¡¯ */
+    .community_list7_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 54%;
+    top: 33%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list8 ªÁ¡¯ */
+    .community_list8_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 75%;
+    top: 33%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list9 ªÁ¡¯ */
+    .community_list9_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 12%;
+    top: 60%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list10 ªÁ¡¯ */
+    .community_list10_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 33%;
+    top: 60%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list11 ªÁ¡¯ */
+    .community_list11_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 54%;
+    top: 60%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    /* list12 ªÁ¡¯ */
+    .community_list12_image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 75%;
+    top: 60%;
+    
+    border: 1px solid #000000;
+    border-radius: 10%;
+    }
+    
+    
+    /* ∆‰¿Ã¬° */
+    .list_paging_table {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 46%;
+        top: 92%;
+    
+        font-size: 20px;
+    }
+    
+    

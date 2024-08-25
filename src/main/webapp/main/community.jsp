@@ -1,132 +1,170 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/communitystyle.css" /> 
 </head>
 <body>
 <!-- haeder -->
+<header>
 <jsp:include page="header.jsp" />
-    <form class="container">
-            <!-- ∏∂Ù ∏∂Ù ƒÌ≈∑ ¿œ¡ˆ -->
-        <button class="main_title" >∏∂Ù ∏∂Ù ƒÌ≈∑ ¿œ¡ˆ</a>
-                <span class="main_title_num">123,456
-                <span class="cooking_daily">></span>
-            </span>
-        </button>
-            <!-- ±∏µ∂«— ¿œ¡ˆ »Æ¿Œ«œ±‚ ¿Ã∏∆ºƒ‹ -->
-        <div class="dibs_list"></div>
-            
-            <!-- ƒÌ≈∑¿œ¡ˆ ¿ÃπÃ¡ˆ1 -->
-        <div class="img_box1" >
-            <a href="#" style="text-decoration-line: none">
-            	<img src="${pageContext.request.contextPath}/static/images/1.png">
-            </a>
-        </div>
-            
-            <!-- ƒÌ≈∑¿œ¡ˆ ¿ÃπÃ¡ˆµÈ -->
-        <div class="cooking_list_box">
-            <div class="img_box2">
-            	<img src="${pageContext.request.contextPath}/static/images/2.png">
-            </div>
-            <div class="img_box3">
-            	<img src="${pageContext.request.contextPath}/static/images/3.png">
-            </div>
-            <div class="img_box4">
-            	<img src="${pageContext.request.contextPath}/static/images/4.png">
-            </div>
-            <div class="img_box5">
-            	<img src="${pageContext.request.contextPath}/static/images/5.png">
-            </div>
-            <div class="img_box6">
-            	<img src="${pageContext.request.contextPath}/static/images/6.png">
-            </div>
-            <div class="img_box7">
-            	<img src="${pageContext.request.contextPath}/static/images/7.png">
-            </div>
-        </div>
-
-            <!-- ∏µŒ∫∏±‚ π⁄Ω∫ -->
-        <div class="list_box">
-            <button class="list_box_content">∏µŒ ∫∏±‚</button>
-        </div>
-
-            <!-- ¿€º∫«œ±‚ π⁄Ω∫ -->
-        <div class="insert_box">
-            <button class="insert_box_content">¿€º∫ «œ±‚</button>
-        </div>
-        <!-- ¿Œ«√∑Áæº≠ ∆˚-->
+</header>
+<section>
+	<form class="container" method="post" enctype="multipart/form-data">
+		<!-- Í≤ÄÏÉâ -->
+		<div class="search_bar">
+			<input class="saerch_bar_content" type="text" placeholder="ex) Í≥†ÎßùÍ≥† ÎßùÍ≥†ÎπôÏàò">
+				<img src="${pageContext.request.contextPath}/static/images/search-icon_png">
+			</input>
+		</div>
+	    <div class="cooking_list_box">
+	        <!-- Î™®ÎùΩ Î™®ÎùΩ Ïø†ÌÇπ ÏùºÏßÄ -->
+	        <div class="main_title"><a href="communiity.jsp" style="text-decoration-line: none">Î™®ÎùΩ Î™®ÎùΩ Ïø†ÌÇπ ÏùºÏßÄ
+	                <span class="main_title_num">123,456</span>
+	                <span class="cooking_daily">></span>
+	            </a>
+	        </div>
+	        <div class="image_box">
+	            <!-- Ïø†ÌÇπÏùºÏßÄ Ïù¥ÎØ∏ÏßÄ1 -->
+		        <div class="img_box1" >
+		            <a href="view.jsp" style="text-decoration-line: none">
+		            	
+		            </a>
+		        </div>
+	            <!-- Ïø†ÌÇπÏùºÏßÄ Ïù¥ÎØ∏ÏßÄÎì§ -->
+	            <div class="img_box2">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	            <div class="img_box3">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	            <div class="img_box4">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	            <div class="img_box5">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	            <div class="img_box6">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	            <div class="img_box7">
+	            	<a href="view.jsp" style="text-decoration-line: none">
+	            		
+	            	</a>
+	            </div>
+	        </div>
+	        <div class="button_box">
+	                <!-- Î™®ÎëêÎ≥¥Í∏∞ Î∞ïÏä§ -->
+		        <div class="list_box">
+		            <span class="list_box_content">
+		            	<a href="communitylist.jsp" style="text-decoration-line: none">Î™®Îëê Î≥¥Í∏∞</a>
+		            </span>
+		        </div>
+	
+	            <!-- ÏûëÏÑ±ÌïòÍ∏∞ Î∞ïÏä§ -->
+		        <div class="insert_box">
+		            <span class="insert_box_content">
+		            	<a href="insert.jsp" style="text-decoration-line: none">ÏûëÏÑ± ÌïòÍ∏∞</a>
+		            </span>
+       			</div>
+       		</div>
+	  	</div>
+	
+        <!-- Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Ìèº-->
         <div class="influencers_box">
             <div class="minigame_box">
-                <button class="minigame_content">
-                    	πÃ¥œ∞‘¿” ¡Ò±‚±‚
-                </button>
+                <div class="minigame_content">
+                    	<a href="minigame.jsp" style="text-decoration-line: none">ÎØ∏ÎãàÍ≤åÏûÑ Ï¶êÍ∏∞Í∏∞</a>
+                </div>
             </div>
-
-            <div class="influencers_content1">√ﬂ√µ ¿Œ«√∑Áæº≠</div>
-            <div class="influencers_content2">¥ı ∏π¿∫ ¿Œ«√∑Áæº≠ ∆»∑ŒøÏ ></div>
-            <!--¿Œ«√∑Áæº≠ π⁄Ω∫-->
-            <div class="influencers1_box">
-                <!-- ¿Œ«√∑Áæº≠ ∞¢ ¿ÃπÃ¡ˆ π◊ ¿ßø° ƒ´øÓ∆Æ-->
+			<!--Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Î∞ïÏä§-->
+	            <div class="influencers_content1">Ï∂îÏ≤ú Ïù∏ÌîåÎ£®Ïñ∏ÏÑú</div>
+	            <div class="influencers_content2">Îçî ÎßéÏùÄ Ïù∏ÌîåÎ£®Ïñ∏ÏÑú ÌåîÎ°úÏö∞ ></div>
+            
+                <!-- Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Í∞Å Ïù¥ÎØ∏ÏßÄ Î∞è ÏúÑÏóê Ïπ¥Ïö¥Ìä∏-->
                 <div class="influencers1_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                	
+                	</a>
                     <span class="influencers1_list_count">+100</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers2_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+200</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers3_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+300</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers4_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+400</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers5_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+500</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers6_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+600</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
                 <div class="influencers7_image">
-                	<img src="${pageContext.request.contextPath}/static/images/person1.png">
+                	<a href="influencerlist.jsp">
+                		
+                    </a>
                     <span class="influencers1_list_count">+700</span>
-                    <span class="influencers_list_nickname">§±§±§±</span>
+                    <span class="influencers_list_nickname">„ÖÅ„ÖÅ„ÖÅ</span>
                 </div>
-                <!--«œ¥‹ πˆ∆∞ ∆˚ (¿Œ«√∑Áæº≠ ±∏∞Ê, ¬Ú«— ¿œ¡ˆ)-->
+                <!--ÌïòÎã® Î≤ÑÌäº Ìèº (Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Íµ¨Í≤Ω, Ï∞úÌïú ÏùºÏßÄ)-->
                 <div class="recommand_influencers_list">
-                    <!--¬Ú«— ¿œ¡ˆ π⁄Ω∫-->
-                    <div class="recommand_influencers_box" onclick="communitylist.jsp">
-                        <!--¬Ú«— ¿œ¡ˆ ≥ªøÎ-->
-                        <span class="recommand_influencers_content">
-                            	¬Ú«— ¿œ¡ˆ »Æ¿Œ«œ±‚
-                        </span>
+                    <!--Ï∞úÌïú ÏùºÏßÄ Î∞ïÏä§-->
+                    <div class="recommand_influencers_box">
+                        <!--Ï∞úÌïú ÏùºÏßÄ ÎÇ¥Ïö©-->
+                        <a href="influencerlist.jsp">
+                        	<span class="recommand_influencers_content">Ï∞úÌïú ÏùºÏßÄ ÌôïÏù∏ÌïòÍ∏∞</span>
+                    	</a>
                     </div>
-                    <!-- ¥ı ∏π¿∫ ¿Œ«√∑Áæº≠ ±∏∞Ê«œ±‚ π⁄Ω∫-->
-                    <div class="influencers_list_box" onclick="influencerlist.jsp">
-                        <!-- ¥ı ∏π¿∫ ¿Œ«√∑Áæº≠ ±∏∞Ê«œ±‚ ≥ªøÎ-->
-                        <span class="influencers_list_content">
-                            	¥ı ∏π¿∫ ¿Œ«√∑Áæº≠ ±∏∞Ê«œ±‚
-                        </span>
+                    <!-- Îçî ÎßéÏùÄ Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Íµ¨Í≤ΩÌïòÍ∏∞ Î∞ïÏä§-->
+                    <div class="influencers_list_box">
+                        <!-- Îçî ÎßéÏùÄ Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Íµ¨Í≤ΩÌïòÍ∏∞ ÎÇ¥Ïö©-->
+                        <a href="influencerlist.jsp">
+                        	<span class="influencers_list_content">Îçî ÎßéÏùÄ Ïù∏ÌîåÎ£®Ïñ∏ÏÑú Íµ¨Í≤ΩÌïòÍ∏∞</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-            <!-- footer -->
- <jsp:include page="footer.jsp" />
-    </form>
+	</form>        
+</section>
+<!-- footer -->
+<jsp:include page="footer.jsp" />
 </body>
 </html>
