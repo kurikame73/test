@@ -42,10 +42,10 @@
 	    	</div>
 		</div>
 	    <div class="insert_btn_box">
-	        <a href="insertBoard.do" class="insert_btn_content">작성완료</a>
+	        <a href="communitylist.jsp" class="insert_btn_content">작성완료</a>
 	    </div>
 	    <div class="list_btn_box">
-	        <a href="communitylist.do" class="list_content">목록</a>
+	        <a href="communitylist.jsp" class="list_content">목록</a>
 	    </div>
     </form>
 </article>

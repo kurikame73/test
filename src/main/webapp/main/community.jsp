@@ -149,7 +149,7 @@
                     <!--찜한 일지 박스-->
                     <div class="recommand_influencers_box">
                         <!--찜한 일지 내용-->
-                        <a href="influencerlist.jsp">
+                        <a href="#">
                         	<span class="recommand_influencers_content">찜한 일지 확인하기</span>
                     	</a>
                     </div>

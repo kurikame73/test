@@ -16,20 +16,21 @@
     <form class="container">
     	<!-- 검색 -->
 		<div class="search_bar">
-			<input class="saerch_bar_content" type="text" placeholder="ex) 고망고 망고빙수">
-				<img src="${pageContext.request.contextPath}/static/images/search-icon_png">
-			</input>
+			<input class="saerch_bar_content" type="text" placeholder="ex) 고망고 망고빙수" />
+			<img src="${pageContext.request.contextPath}/static/images/search-icon_png">
 		</div>
         <div class="influencers_box">
             <div class="influencers_content">이번주 급상승 밥플루언서</div>
             <!--인플루언서 이미지 박스-->
             <div class="influencers1_box">
             <!-- 인플루언서 각 이미지 및 위에 카운트-->
-            <div class="influencers1_image">
-                <span class="influencers1_list_count">+100</span>
-
-                <span class="influencers_list_nickname">ㅁㅁㅁ</span>
-            </div>
+            
+			<a href="influencerview.jsp">
+            	<div class="influencers1_image">
+	                <span class="influencers1_list_count">+100</span>
+	                <span class="influencers_list_nickname">ㅁㅁㅁ</span>
+				</div>
+			</a>
             <div class="influencers2_image">
                 <span class="influencers1_list_count">+200</span>
 

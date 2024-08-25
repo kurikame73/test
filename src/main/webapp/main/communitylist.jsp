@@ -90,8 +90,9 @@
                 <td>
                     <div class="community_write">
                         <div class="community_write_box">
-                            <input type="submit" class="community_write_content" value="글쓰기">
-                            <a href="insert.jsp" style="text-decoration-line: none"></a>
+                            <a href="insert.jsp" style="text-decoration-line: none">
+                            	<span class="community_write_content">글쓰기</span>
+                            </a>
 						</div>
 					</div>
                 </td>
