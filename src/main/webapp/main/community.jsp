@@ -10,6 +10,7 @@
 <body>
 <!-- haeder -->
 <jsp:include page="header.jsp" />
+
     <form class="container">
             <!-- 모락 모락 쿠킹 일지 -->
         <button class="main_title" >모락 모락 쿠킹 일지</a>
