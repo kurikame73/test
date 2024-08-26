@@ -1,0 +1,449 @@
+/* 커뮤니티 전체 폼*/
+.container{
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    max-width: 2440px;
+    justify-content: center;
+    
+    background: #FFFFFF;
+    }
+    
+    /* 검색창 */
+    .search_bar{
+    position: absolute;
+    width: 60%;
+    height: 93px;
+    left: 25%;
+    top: 5%;
+    
+    background: #F8F6F3;
+    border-radius: 14.094px;
+    }
+    
+    .saerch_bar_content{
+        width: 60%;
+        height: 93px;
+        border:none;
+        background:none;
+        text-align:center;
+        justify-content:center;
+    }
+    
+    /* 모락 모락 쿠킹 일지 */
+    .main_title {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 17%;
+    top: 5%;
+    
+    font-size: 32px;
+    font-weight: bold;
+    }
+    
+    /* 모두보기 박스 */
+    .list_box{
+    position: absolute;
+    width: 90%;
+    height: 70px;
+    left: 20%;
+    top: 73%;
+    
+    background-color: #F2EADF;
+    border-radius: 14px;
+    }
+    
+    /* 모두 보기 */
+    .list_box_content{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 45%;
+    top: 30%;
+    
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    
+    color: #7A5F5F;
+    }
+    
+    /* 작성하기 박스 */
+    .insert_box{
+    position: relative;
+    width: 90%;
+    height: 70px;
+    justify-content: center;
+    left: 20%;
+    top: 40%;
+    
+    background-color: #967748;
+    border-radius: 14.3654px;
+    }
+    
+    /* 작성하기 */
+    .insert_box_content{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 45%;
+    top: 25%;
+    text-decoration-line: none;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    
+    color: #FFFFFF;
+    }
+    
+    /*버튼 박스 폼*/
+    .button_box{
+        justify-content: center;
+        position: relative;
+        width: 80%;
+        max-width: 100%;
+        height: 36%;
+    }
+    
+    /* 미니게임 박스 */
+    .minigame_box{
+        position: absolute;
+        width: 60%;
+        height: 8%;
+        left: 22%;
+        top: 5%;
+        justify-content: center;
+        
+        background: #967748;
+        border-radius: 14.3654px;
+    }
+    
+    /* 미니게임 버튼 */
+    .minigame_content{
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 45%;
+        top: 24%;
+        
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 32px;
+        color: #FFFFFF;
+    }
+    
+    /* 리스트 박스 */
+    .cooking_list_box {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    top: 13%;
+    
+    border-top: 3px solid #F8F6F3;
+    border-bottom: 3px solid #F8F6F3;
+    
+    }
+    
+    /*이미지 박스 폼*/
+    .image_box {
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+    
+    /* 이미지 1 */
+    .img_box1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 18%;
+    top: 25%;
+    
+    border:1px solid #000000;
+    border-radius: 20px;
+    }
+    
+    /* 이미지 2 */
+    .img_box2 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 46%;
+    top: 25%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 이미지 3 */
+    .img_box3 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 61.5%;
+    top: 25%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 이미지 4 */
+    .img_box4 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 77%;
+    top: 25%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 이미지 5 */
+    .img_box5 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 46%;
+    top: 73%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 이미지 6 */
+    .img_box6 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 61.5%;
+    top: 73%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 이미지 7 */
+    .img_box7 {
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    left: 77%;
+    top: 73%;
+    
+    border:1px solid #000000;
+    border-radius: 15px;
+    }
+    
+    /* 인플루언서 박스 */
+    .influencers_box{
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        top: 56%;
+        
+        border-top: 3px solid #F8F6F3;
+        border-bottom: 3px solid #F8F6F3;
+    }
+    /*추천 인플루언서*/
+    .influencers_content1{
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 18%;
+        top: 22%;
+    
+        font-size: 32px;
+        font-weight: bold;
+    }
+    
+    /*인플루언서 팔로우*/
+    .influencers_content2{
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 74%;
+        top: 35%;
+    
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    /* 찜한 일지 박스 */
+    .recommand_influencers_box {
+    position: absolute;
+    width: 370px;
+    height: 75px;
+    left: 55%;
+    top: 80%;
+    
+    background: #F8F6F3;
+    border-radius: 10.4844px;
+    }
+    
+    /* 찜한 일지 확인하기 */
+    .recommand_influencers_content {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 26%;
+    top: 30%;
+    
+    text-align: center;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 23.8046px;
+    
+    color: #7A5F5F;
+    }
+    
+    /* 더 많은 밥플루언서 박스 */
+    .influencers_list_box {
+    position: absolute;
+    width: 370px;
+    height: 75px;
+    left: 30%;
+    top: 80%;
+    
+    background: #DCDCDC;
+    border-radius: 10.4844px;
+    }
+    
+    /* 더 많은 밥플루언서 구경하기 */
+    .influencers_list_content {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 15%;
+    top: 35%;
+    
+    text-align: center;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23.8046px;
+    
+    color: #484848;
+    }
+    
+    /* 이미지1 */
+    .influencers1_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 18%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 이미지2 */
+    .influencers2_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 27%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 이미지3 */
+    .influencers3_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 이미지4 */
+    .influencers4_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 45%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+        }
+    
+    /* 이미지5 */
+    .influencers5_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 54%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+    filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 이미지6 */
+    .influencers6_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 63%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 이미지7 */
+    .influencers7_image {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 72%;
+        top: 45%;
+        
+        border: 1px solid #000000;
+        border-radius: 100%;
+        filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+    }
+    
+    /* 카운트 */
+    .influencers1_list_count{
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    left: 70px;
+    
+    background-color: #FF7105;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    }
+    
+    .influencers_list_nickname {
+    position: absolute;
+    width: 72px;
+    height: 35px;
+    left: 30%;
+    top: 110%;
+    }
+    

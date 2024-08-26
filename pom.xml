@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.yorizip</groupId>
-    <artifactId>myapp</artifactId>
-    <name>YoriZip</name>
-    <packaging>war</packaging>
-    <version>1.0.0-BUILD-SNAPSHOT</version>
-    <properties>
-        <java-version>1.8</java-version>
-        <org.springframework-version>5.3.25</org.springframework-version>
-        <org.aspectj-version>1.9.9</org.aspectj-version>
-        <org.slf4j-version>1.7.36</org.slf4j-version>
-        <json-version>20210307</json-version> <!-- JSON 라이브러리 버전 -->
-    </properties>
-    <dependencies>
-        <!-- Spring -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-        
-        <!-- JSON Parsing Library -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${json-version}</version>
-        </dependency>
-        
-        <!-- AspectJ -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>${org.aspectj-version}</version>
-        </dependency>
+
+
 
         <!-- Logging -->
         <!-- SLF4J API -->
