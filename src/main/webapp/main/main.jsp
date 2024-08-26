@@ -19,7 +19,6 @@
 <jsp:include page="toggle.jsp"/>
 </section>
 <footer>
-<!-- images  -->
   <jsp:include page="footer.jsp" />
 </footer>
 </body>
