@@ -33,7 +33,7 @@
                         <a href="#" class="login-link">로그인/</a>
                         <a href="#" class="signup-link">회원가입</a>
                     </li>
-                    <li class="support"><a href="#">고객센터</a></li>
+                    <li class="support" style="display: block;"><a href="#" >고객센터</a></li>
                     <li class="mypage" style="display: none;"><a href="#">마이페이지</a></li>
                     <li class="logout" style="display: none;"><a href="#">로그아웃</a></li>
                 </ul>
