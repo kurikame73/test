@@ -7,14 +7,20 @@
 <title>mainpage</title>
 </head>
 <body>
+<header>
   <jsp:include page="header.jsp" />
-
+</header>
 <!-- banner  -->
 <section>
 <jsp:include page="banner.jsp"/>
 </section>
 
+<section>
+<jsp:include page="toggle.jsp"/>
+</section>
+<footer>
 <!-- images  -->
   <jsp:include page="footer.jsp" />
+</footer>
 </body>
 </html>

@@ -12,12 +12,26 @@
 
     <!-- Handles HTTP GET requests for /static/** by efficiently serving up static resources in the /static directory -->
     <resources mapping="/static/**" location="/static/" />
-<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    <beans:property name="prefix" value="/WEB-INF/views/" />
-    <beans:property name="suffix" value=".jsp" />
-</beans:bean>
+
+    <!-- View resolver to map views -->
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/views/" />
+        <beans:property name="suffix" value=".jsp" />
+    </beans:bean>
 
     <!-- Component scan to find @Controller classes -->
     <context:component-scan base-package="com.yorizip.myapp" />
-    
+
+    <!-- PropertyPlaceholderConfigurer to load properties from application.properties -->
+    <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <beans:property name="locations">
+            <beans:list>
+                <beans:value>classpath:application.properties</beans:value>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <!-- Define RestTemplate bean -->
+    <beans:bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
 </beans:beans>
