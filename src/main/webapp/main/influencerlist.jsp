@@ -1,107 +1,119 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/influencerstyle.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/influliststyle.css" />
 </head>
 <body>
 <!-- haeder -->
+<header>
 <jsp:include page="header.jsp" />
+</header>
+<section>
     <form class="container">
+    	<!-- ê²€ìƒ‰ -->
+		<div class="search_bar">
+			<input class="saerch_bar_content" type="text" placeholder="ex) ê³ ë§ê³  ë§ê³ ë¹™ìˆ˜" />
+			<img src="${pageContext.request.contextPath}/static/images/search-icon_png">
+		</div>
         <div class="influencers_box">
-            <div class="influencers_content">ÀÌ¹øÁÖ ±Þ»ó½Â ¹äÇÃ·ç¾ð¼­</div>
-            <!--ÀÎÇÃ·ç¾ð¼­ ÀÌ¹ÌÁö ¹Ú½º-->
+            <div class="influencers_content">ì´ë²ˆì£¼ ê¸‰ìƒìŠ¹ ë°¥í”Œë£¨ì–¸ì„œ</div>
+            <!--ì¸í”Œë£¨ì–¸ì„œ ì´ë¯¸ì§€ ë°•ìŠ¤-->
             <div class="influencers1_box">
-            <!-- ÀÎÇÃ·ç¾ð¼­ °¢ ÀÌ¹ÌÁö ¹× À§¿¡ Ä«¿îÆ®-->
-            <div class="influencers1_image">
-                <span class="influencers1_list_count">+100</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
-            </div>
+            <!-- ì¸í”Œë£¨ì–¸ì„œ ê° ì´ë¯¸ì§€ ë° ìœ„ì— ì¹´ìš´íŠ¸-->
+            
+			<a href="influencerview.jsp">
+            	<div class="influencers1_image">
+	                <span class="influencers1_list_count">+100</span>
+	                <span class="influencers_list_nickname">ã…ã…ã…</span>
+				</div>
+			</a>
             <div class="influencers2_image">
                 <span class="influencers1_list_count">+200</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             <div class="influencers3_image">
                 <span class="influencers1_list_count">+300</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             <div class="influencers4_image">
                 <span class="influencers1_list_count">+400</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             <div class="influencers5_image">
                 <span class="influencers1_list_count">+500</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             <div class="influencers6_image">
                 <span class="influencers1_list_count">+600</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             <div class="influencers7_image">
                 <span class="influencers1_list_count">+700</span>
-                <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                <span class="influencers_list_nickname">ã…ã…ã…</span>
             </div>
             </div>
         </div>
-        <div class="influencers_content1">ÀÌ·± ¹äÇÃ·ç¾ð¼­´Â ¾î¶§¿ä?
-            <span class="influencers_content2">Çýµð´Ï ´Ô²² ÃßÃµÇÏ´Â ·£´ý ¹äÇÃ·ç¾ð¼­</span>
+        <div class="influencers_content1">ì´ëŸ° ë°¥í”Œë£¨ì–¸ì„œëŠ” ì–´ë•Œìš”?
+            <span class="influencers_content2">í˜œë””ë‹ˆ ë‹˜ê»˜ ì¶”ì²œí•˜ëŠ” ëžœë¤ ë°¥í”Œë£¨ì–¸ì„œ</span>
         </div>
         <div class="influencers_box2">
-
-            <!--ÀÎÇÃ·ç¾ð¼­ ¹Ú½º-->
+            <!--ì¸í”Œë£¨ì–¸ì„œ ë°•ìŠ¤-->
             <div class="influencers2_box">
-            <!-- ÀÎÇÃ·ç¾ð¼­ °¢ ÀÌ¹ÌÁö ¹× À§¿¡ Ä«¿îÆ®-->
+            <!-- ì¸í”Œë£¨ì–¸ì„œ ê° ì´ë¯¸ì§€ ë° ìœ„ì— ì¹´ìš´íŠ¸-->
             <div class="influencers_box_form">
                 <div class="influencers1_image">
                     <span class="influencers1_list_count">+100</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers2_image">
                     <span class="influencers1_list_count">+200</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers3_image">
                     <span class="influencers1_list_count">+300</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers4_image">
                     <span class="influencers1_list_count">+400</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers5_image">
                     <span class="influencers1_list_count">+500</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers6_image">
                     <span class="influencers1_list_count">+600</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
                 <div class="influencers7_image">
                     <span class="influencers1_list_count">+700</span>
-                    <img src="${pageContext.request.contextPath}/static/images/person1.png">
-                    <span class="influencers_list_nickname">¤±¤±¤±</span>
+
+                    <span class="influencers_list_nickname">ã…ã…ã…</span>
                 </div>
-            </div>        
+            </div> 
+            </div>       
         </div>
     </form>
-
+</section>
 <!-- footer -->
-  <jsp:include page="footer.jsp" />
+<footer>
+<jsp:include page="footer.jsp" />
+</footer>
 </body>
 </html>

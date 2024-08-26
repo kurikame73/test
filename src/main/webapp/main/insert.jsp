@@ -1,58 +1,57 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/insert.css" /> 
 </head>
 <!-- haeder -->
+<header>
 <jsp:include page="header.jsp" />
-    <form class="container">
-	    <div class="insert_main_title">ƒÌ≈∑¿œ¡ˆ</div>
-	    <div class="insert_title">ø¿¥√¿« ƒÌ≈∑ ¿œ¡ˆ</div>
+</header>
+<article>
+    <form class="container" action="insertBoard.do">
+	    <div class="insert_main_title">Ïø†ÌÇπÏùºÏßÄ</div>
+	    <div class="insert_title">Ïò§ÎäòÏùò Ïø†ÌÇπ ÏùºÏßÄ</div>
 	
 	    <div class="main_insert_form">
-	        <div class="insert_form">
-	            <div class="insert_form_title">
-	                <div class="insert_title_form">
-	                    <div class="insert_sec_image">¿ÃπÃ¡ˆ</div>
-	                    <div class="insert_sec_bold">B</div>
-	                    <select class="insert_sec_size_content">
-	                        <option value="">size</option>
-	                        <option value="5">5</option>
-	                        <option value="7">7</option>
-	                        <option value="10">10</option>
-	                    </select>
-	                </div>
+	        <input class="insert_form_title" placeholder="Ï†úÎ™©ÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî" />
+	        <div class="insert_title_form">
+	            <div class="insert_sec_image">
+	                <img src="${pageContext.request.contextPath}/static/images/image.png">
 	            </div>
-	
-	            <div class="insert_sec_form_box">
-	                <div class="insert_sec_form">¡¶∏Ò</div>
-	            </div>
-	
-	            <div class="insert_content_box">
-	                <div class="insert_content_form">
-	                    <div class="insert_image_box">
-	                        <div class="insert_image_content">ªÁ¡¯</div>
-	                    </div>
-	                    <div class="insert_sec_bold_content">±Ω±‚</div>
-	                    <div class="insert_sec_size"></div>
-	                    <div class="insert_content_msg">≥ªøÎ¿ª ¿‘∑¬«ÿ¡÷ººø‰</div>
-	                </div>
-	            </div>
+	            <span class="insert_sec_image_content">ÏÇ¨ÏßÑ</span>
+	            
+	            <div class="insert_sec_bold">B</div>
+	            <span class="insert_sec_bold_content">ÍµµÍ∏∞</span>
+	            
+	            <select class="insert_sec_size_content">
+	                <option value="">size</option>
+	                <option value="5">5</option>
+	                 <option value="7">7</option>
+	                <option value="10">10</option>
+	            </select>
 	        </div>
-	    </div>
 	
+	        <div class="insert_content_box">
+		        <div class="insert_image_box">
+		            <textarea class="insert_content_form" placeholder="ÎÇ¥Ïö©ÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî"></textarea>
+		        </div>
+	    	</div>
+		</div>
 	    <div class="insert_btn_box">
-	        <button class="insert_btn_content">¿€º∫øœ∑·</button>
+	        <a href="communitylist.jsp" class="insert_btn_content">ÏûëÏÑ±ÏôÑÎ£å</a>
 	    </div>
 	    <div class="list_btn_box">
-	        <button class="list_content" >∏Ò∑œ</button>
+	        <a href="communitylist.jsp" class="list_content">Î™©Î°ù</a>
 	    </div>
     </form>
+</article>
     <!-- footer -->
-  <jsp:include page="footer.jsp" />
+<footer>
+<jsp:include page="footer.jsp" />
+</footer>
 </body>
 </html>
