@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,29 +13,29 @@
      <header>
         <div class="header-container">
             <div class="logo">
-                <a href="#"><img src="${pageContext.request.contextPath}/static/images/logo.png" alt="YoriZip ·Î°í"></a>
+                <a href="main.jsp"><img src="${pageContext.request.contextPath}/static/images/logo.png" alt="YoriZip ë¡œê³ "></a>
             </div>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#">µçµçÇÑ³¢</a></li>
-                    <li><a href="#">´Þ´Þ°£½Ä</a></li>
-                    <li><a href="#">ÄíÅ·ÀÏÁö</a></li>
-                    <li><a href="#">¿À´ÃÀÇ ¸Þ´º</a></li>
+                    <li><a href="#">ë“ ë“ í•œë¼</a></li>
+                    <li><a href="#">ë‹¬ë‹¬ê°„ì‹</a></li>
+                    <li><a href="#">ì¿ í‚¹ì¼ì§€</a></li>
+                    <li><a href="#">ì˜¤ëŠ˜ì˜ ë©”ë‰´</a></li>
                 </ul>
             </nav>
             <nav class="user-menu">
                 <div class="search-icon">
-                    <a href="#"><img src="${pageContext.request.contextPath}/static/images/search-icon.png" alt="°Ë»ö"></a>
+                    <a href="searchKey.jsp"><img src="${pageContext.request.contextPath}/static/images/search-icon.png" alt="ê²€ìƒ‰"></a>
                 </div>
                 <ul>
-                    <!-- ·Î±×ÀÎ »óÅÂ¿¡ µû¶ó Ç¥½ÃÇÒ Ç×¸ñµé -->
+                    <!-- ë¡œê·¸ì¸ ìƒíƒœì— ë”°ë¼ í‘œì‹œí•  í•­ëª©ë“¤ -->
                     <li class="auth">
-                        <a href="#" class="login-link">·Î±×ÀÎ/</a>
-                        <a href="#" class="signup-link">È¸¿ø°¡ÀÔ</a>
+                        <a href="${pageContext.request.contextPath}/login/login.jsp" class="login-link">ë¡œê·¸ì¸/</a>
+                        <a href="#" class="signup-link">íšŒì›ê°€ìž…</a>
                     </li>
-                    <li class="support"><a href="#">°í°´¼¾ÅÍ</a></li>
-                    <li class="mypage" style="display: none;"><a href="#">¸¶ÀÌÆäÀÌÁö</a></li>
-                    <li class="logout" style="display: none;"><a href="#">·Î±×¾Æ¿ô</a></li>
+                    <li class="support"><a href="#">ê³ ê°ì„¼í„°</a></li>
+                    <li class="mypage" style="display: none;"><a href="#">ë§ˆì´íŽ˜ì´ì§€</a></li>
+                    <li class="logout" style="display: none;"><a href="#">ë¡œê·¸ì•„ì›ƒ</a></li>
                 </ul>
             </nav>
             <div class="hamburger-menu">
@@ -45,17 +45,17 @@
             </div>
         </div>
 
-        <!-- ¸ð¹ÙÀÏ ¸Þ´º -->
+        <!-- ëª¨ë°”ì¼ ë©”ë‰´ -->
         <div class="mobile-menu">
             <ul>
-                <li><a href="#">µçµçÇÑ³¢</a></li>
-                <li><a href="#">´Þ´Þ°£½Ä</a></li>
-                <li><a href="#">ÄíÅ·ÀÏÁö</a></li>
-                <li><a href="#">¿À´ÃÀÇ ¸Þ´º</a></li>
-                <li class="auth-mobile"><a href="#">·Î±×ÀÎ/È¸¿ø°¡ÀÔ</a></li>
-                <li><a href="#">°í°´¼¾ÅÍ</a></li>
-                <li class="mypage-mobile" style="display: none;"><a href="#">¸¶ÀÌÆäÀÌÁö</a></li>
-                <li class="logout-mobile" style="display: none;"><a href="#">·Î±×¾Æ¿ô</a></li>
+                <li><a href="#">ë“ ë“ í•œë¼</a></li>
+                <li><a href="#">ë‹¬ë‹¬ê°„ì‹</a></li>
+                <li><a href="#">ì¿ í‚¹ì¼ì§€</a></li>
+                <li><a href="#">ì˜¤ëŠ˜ì˜ ë©”ë‰´</a></li>
+                <li class="auth-mobile"><a href="#">ë¡œê·¸ì¸/íšŒì›ê°€ìž…</a></li>
+                <li><a href="#">ê³ ê°ì„¼í„°</a></li>
+                <li class="mypage-mobile" style="display: none;"><a href="#">ë§ˆì´íŽ˜ì´ì§€</a></li>
+                <li class="logout-mobile" style="display: none;"><a href="#">ë¡œê·¸ì•„ì›ƒ</a></li>
             </ul>
         </div>
     </header>
