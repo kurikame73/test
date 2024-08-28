@@ -10,14 +10,14 @@
 <body>
 <!-- haeder -->
 <header>
-<jsp:include page="header.jsp" />
+<jsp:include page="/main/header.jsp" />
 </header>
 <section>
     <form class="container">
     	<!-- 검색 -->
 		<div class="search_bar">
 			<input class="saerch_bar_content" type="text" placeholder="ex) 고망고 망고빙수" />
-			<img src="${pageContext.request.contextPath}/static/images/search-icon_png">
+			<img src="${pageContext.request.contextPath}/static/images/search-icon.png">
 		</div>
         <div class="influencers_box">
             <div class="influencers_content">이번주 급상승 밥플루언서</div>
@@ -113,7 +113,7 @@
 </section>
 <!-- footer -->
 <footer>
-<jsp:include page="footer.jsp" />
+<jsp:include page="/main/footer.jsp" />
 </footer>
 </body>
 </html>

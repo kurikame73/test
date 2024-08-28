@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage_recipe.css">
 </head>
+
 <body>
 
   	<jsp:include page="/main/header.jsp" />

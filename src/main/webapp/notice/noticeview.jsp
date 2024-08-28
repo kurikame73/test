@@ -29,11 +29,11 @@
     </div>
     
     <div>
-		<a href="notice.jsp" class="back-button">이전</a>
-	</div>
-	
-	
-	<!-- 임시로 페이징 css 넣은 부분, 아래 스크립트릿 부분 넣으면 이 부분은 삭제 -->
+      <a href="notice.jsp" class="back-button">이전</a>
+   </div>
+   
+   
+   <!-- 임시로 페이징 css 넣은 부분, 아래 스크립트릿 부분 넣으면 이 부분은 삭제 -->
     <div class="pagination">
         <a href="#">&laquo;</a>
         <a href="#" class="active">1</a>
@@ -43,16 +43,16 @@
     </div>
 
 
-		<%--  <table border="1" width="90%">
-		       <tr>
-		          <td align="center">
-		             <!--  [첫번째페이지][이전블럭] [1] [2] [3] [4] [5] [다음블럭][마지막페이지] , 아래 rquest.getRequestURI()는 현재주소값을 가져옴-->
-		              <%= BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, request.getRequestURI()) %> 
-		          </td>
-		       </tr>
-		    </table> --%>
-		    <jsp:include page="/mypage/mypage_window.jsp" />
-		    <jsp:include page="/chat/chat.jsp" />
+      <%--  <table border="1" width="90%">
+             <tr>
+                <td align="center">
+                   <!--  [첫번째페이지][이전블럭] [1] [2] [3] [4] [5] [다음블럭][마지막페이지] , 아래 rquest.getRequestURI()는 현재주소값을 가져옴-->
+                    <%= BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, request.getRequestURI()) %> 
+                </td>
+             </tr>
+          </table> --%>
+          <jsp:include page="/mypage/mypage_window.jsp" />
+          <jsp:include page="/chat/chat.jsp" />
       <jsp:include page="/main/footer.jsp" />
 </body>
 </html>

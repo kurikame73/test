@@ -7,8 +7,12 @@
 <title>Insert title here</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/notice.css">
 </head>
-<body class="userinfo_body">
+<body>
+
+<header>
   <jsp:include page="/main/header.jsp" />
+</header>
+
 
 <h2>공지사항</h2>
     
@@ -24,22 +28,22 @@
             
         </div>
         <div class="notice-content">
-        	<table>
-			<c:forEach items="${noticeList }" var="notice">
-				<tr>
-					<td>${notice.seq }</td>
-					<td>
-						<a href="notice.do?seq=${notice.seq }">${notice.title }</a> 
-					</td>
-					<td>${notice.writer }</td>
-					<td>${notice.regDate }</td>
-				</tr>
-			</c:forEach>
-		</table>	
+           <table>
+         <c:forEach items="${noticeList }" var="notice">
+            <tr>
+               <td>${notice.seq }</td>
+               <td>
+                  <a href="notice.do?seq=${notice.seq }">${notice.title }</a> 
+               </td>
+               <td>${notice.writer }</td>
+               <td>${notice.regDate }</td>
+            </tr>
+         </c:forEach>
+      </table>   
         </div>
     </div>
   
-		
+      
     <div class="pagination">
         <a href="#">&laquo;</a>
         <a href="#" class="active">1</a>
@@ -48,8 +52,8 @@
         <a href="#">&raquo;</a>
     </div>
     <jsp:include page="/mypage/mypage_window.jsp" />
-	<jsp:include page="/chat/chat.jsp" />
-  	<jsp:include page="/main/footer.jsp" />
+   <jsp:include page="/chat/chat.jsp" />
+     <jsp:include page="/main/footer.jsp" />
   
  
 </body>

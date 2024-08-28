@@ -1,11 +1,20 @@
 @charset "utf-8";
 
+body{
+	background: #FFFFFF;
+	 font-family: 'Pretendard';
+	 margin: 0;
+	 
+	
+	
+}
+
 .container{
 position: relative;
 width: 100%;
 height: 1900px;
 
-background: #FFFFFF;
+
 }
 
 /* 쿠킹일지 */
@@ -34,7 +43,7 @@ color: #000000;
     left: 10%;
     top: 15%;
     
-    font-family: 'Pretendard';
+   
     font-style: normal;
     font-weight: 400;
     font-size: 36px;

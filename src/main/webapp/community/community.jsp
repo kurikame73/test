@@ -10,7 +10,7 @@
 <body>
 <!-- haeder -->
 <header>
-<jsp:include page="header.jsp" />
+<jsp:include page="/main/header.jsp" />
 </header>
 <section>
 	<form class="container" method="post" enctype="multipart/form-data">
@@ -165,6 +165,6 @@
 	</form>        
 </section>
 <!-- footer -->
-<jsp:include page="footer.jsp" />
+<jsp:include page="/main/footer.jsp" />
 </body>
 </html>

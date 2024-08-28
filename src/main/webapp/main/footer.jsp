@@ -45,8 +45,8 @@
             <div class="footer_box">
                 <h4>고객센터</h4>
                 <ul>
-                    <li><a href="#">FaQ</a></li>
-                    <li><a href="#">공지사항</a></li>
+                    <li><a href="${pageContext.request.contextPath}/faq/faq.jsp">FaQ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/notice/notice.jsp">공지사항</a></li>
                 </ul>
             </div>
         </div>

@@ -9,7 +9,10 @@
 </head>
 <body>
 
-  	<jsp:include page="/main/header.jsp" />
+	<header>
+	<jsp:include page="/main/header.jsp" />
+	</header>
+  	
   	<h2>회원정보 수정</h2>
   	
   	      <div class="userinfo_next_container">

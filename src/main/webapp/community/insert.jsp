@@ -9,7 +9,7 @@
 </head>
 <!-- haeder -->
 <header>
-<jsp:include page="header.jsp" />
+<jsp:include page="/main/header.jsp" />
 </header>
 <article>
     <form class="container" action="insertBoard.do">
@@ -50,8 +50,10 @@
     </form>
 </article>
     <!-- footer -->
+    
+    <jsp:include page="/chat/chat.jsp" />
 <footer>
-<jsp:include page="footer.jsp" />
+<jsp:include page="/main/footer.jsp" />
 </footer>
 </body>
 </html>

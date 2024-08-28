@@ -18,7 +18,13 @@
 <section>
 <jsp:include page="toggle.jsp"/>
 </section>
+
+
+
+<jsp:include page="/chat/chat.jsp" />
+
 <footer>
+
   <jsp:include page="footer.jsp" />
 </footer>
 </body>

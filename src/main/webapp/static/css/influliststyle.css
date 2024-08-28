@@ -6,26 +6,12 @@
     background: #FFFFFF;
 }
 
-/* 검색창 */
-.search_bar{
-position: absolute;
-width: 40%;
-height: 93px;
-left: 27%;
-top: 5%;
 
-background: #F8F6F3;
-border-radius: 14.094px;
-}
 
-.saerch_bar_content{
-    width: 60%;
-    height: 93px;
-    border:none;
-    background:none;
-    text-align:center;
-    justify-content:center;
-}
+
+
+
+
 
 /* 모락 모락 쿠킹 일지 */
 .main_title {

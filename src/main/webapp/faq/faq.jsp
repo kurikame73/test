@@ -6,18 +6,62 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/faq.css">
+
+<script>
+function switchTab(event) {
+    // 모든 탭에서 active 클래스 제거
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // 클릭된 탭에 active 클래스 추가
+    event.target.classList.add('active');
+}
+</script>
+<style>
+.container{
+	background-color: #fff;
+}
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-menu .tab {
+    padding: 10px 20px;
+    border: 1px solid #b38c5a;
+    background-color: #fff;
+    color: #b38c5a;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-menu .tab.active, .tab-menu .tab:hover {
+    background-color: #b38c5a;
+    color: #fff;
+}
+</style>
 </head>
 <body>
+<header>
 <jsp:include page="/main/header.jsp" />
-<!-- 자주하는 질문 리스트   -->
-	<center>
-			<h2 align="center">자주 하는 질문</h2>
-			<ul>
-			<li class="li"><a href="#" class="button" id="a">전체</a></li>
-			<li class="li"><a href="#" class="button" id="a">회원 문의</a></li>
-			<li class="li"><a href="#" class="button" id="a">서비스</a></li>
-			<li class="li"><a href="#" class="button" id="a">기타</a></li>
-		</ul>
+</header>
+
+
+<!-- 버튼  -->
+<div class ="container">
+
+   <!-- 탭 메뉴 -->
+    <section class="tab-menu">
+        <button class="tab active" onclick="switchTab(event)">전체</button>
+        <button class="tab" onclick="switchTab(event)">회원문의</button>
+        <button class="tab" onclick="switchTab(event)">서비스</button>
+             <button class="tab" onclick="switchTab(event)">기타</button>
+    </section>
+
+
+	
 		
 		<!-- 아코디언식 질문 -->
 	 <div class="accordion">
@@ -40,6 +84,13 @@
 	 <script src="${pageContext.request.contextPath}/static/js/faq.js"></script>
 	      <jsp:include page="/mypage/mypage_window.jsp" />
 	<jsp:include page="/chat/chat.jsp" />
-  	<jsp:include page="/main/footer.jsp" />
+	
+	
+	</div>
+  	
+  	<footer>
+  	  	<jsp:include page="/main/footer.jsp" />
+  	</footer>
+
 </body>
 </html>

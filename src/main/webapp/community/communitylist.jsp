@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- haeder -->
-<jsp:include page="header.jsp" />
+<jsp:include page="/main/header.jsp" />
 <section>
     <form class="container">
     	<!-- 검색 -->
@@ -102,7 +102,7 @@
 </section>
 <footer>
 <!-- footer -->
-<jsp:include page="footer.jsp" />
+<jsp:include page="/main/footer.jsp" />
 </footer>
 </body>
 </html>
