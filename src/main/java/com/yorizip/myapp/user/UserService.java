@@ -260,15 +260,22 @@ public class UserService {
 
     @Transactional
     public UserVO registerUserNo(String userName, String password, String nickname, String userEmail, String phone) {
-        logger.info("Received 1: {}", userName);
+        logger.info("Registering user - Input parameters:");
+        logger.info("userName: {}", userName);
+        logger.info("password: {}", password);
+        logger.info("nickname: {}", nickname);
+        logger.info("userEmail: {}", userEmail);
+        logger.info("phone: {}", phone);
+
 
         // 비밀번호 해싱 처리 (예: BCrypt)
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-        logger.info("Received 2: {}", password);
+        logger.info("Password hashed successfully");
+        logger.info("password: {}", hashedPassword);
 
         // 사용자 객체 생성
         UserVO user = new UserVO(userName, nickname, hashedPassword, phone, userEmail);
-        logger.info("Received 3: {}", nickname);
+        logger.info("UserVO object created: {}", user);
 
         // User 정보 저장
         userMapper.insertUser(user);
