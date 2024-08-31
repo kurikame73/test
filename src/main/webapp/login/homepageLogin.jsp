@@ -18,15 +18,15 @@
     <!-- 로그인 박스 (컨테이너로 감싸서 중앙 정렬) -->
     <div class="container">
         <div class="login-box">
-            <form action="/myapp/main/main.jsp" method="post">
+            <form action="/auth/login" method="get">
                 <div class="login-header">로그인</div>
                 <div style="width: 100%;">
                     <!-- ID 입력 필드 -->
                     <div class="input-label">아이디</div>
-                    <input type="text" class="input-field" placeholder="아이디를 입력하세요" required>
+                    <input type="text" class="input-field" name="email" placeholder="아이디를 입력하세요" required>
                     <!-- PASSWORD 입력 필드 -->
                     <div class="input-label">비밀번호</div>
-                    <input type="password" class="input-field" placeholder="비밀번호를 입력하세요" required>
+                    <input type="password" class="input-field" name="password" placeholder="비밀번호를 입력하세요" required>
                     <!-- 로그인 버튼 -->
                     <button type="submit" class="button_login">로그인</button>
                     <div class="links">

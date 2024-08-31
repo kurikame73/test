@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,14 +17,15 @@
         <div class="modal">
 
             <div class="profile-container">
-            <img src="${pageContext.request.contextPath}/static/images/profile.png" alt="Icon" width="50">
-            <h4>이름</h4>
-             <button class="close-btn" onclick="closeModal()">X</button>
+                <img src="<c:out value='${sessionScope.user.profileImgUrl}'/>" alt="Icon" width="50">
+                <h4><c:out value="${sessionScope.user.userName}"/></h4>
+                <button class="close-btn" onclick="closeModal()">X</button>
             </div>
             <p>닉네임</p>
             <hr>
+            <hr>
             <div class="modal-menu">
-                <a href="">회원정보 수정</a>
+                <a href="/mypage/mypage_userinfo.jsp">회원정보 수정</a>
                 <a href="">찜한 쿠킹일지</a>
                 <a href="">나의 쿠킹일지</a>
                 <a href="">스크랩 레시피</a>

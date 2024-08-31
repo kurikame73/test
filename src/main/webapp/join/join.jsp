@@ -117,46 +117,51 @@ header, footer {
     <!-- 회원가입 박스 (컨테이너로 감싸서 중앙 정렬) -->
     <div class="container">
         <div class="join-box">
-            <form action="/myapp/login/login.jsp" method="post">
+            <form action="/user/register/no" method="post">
                 <div class="join-header">회원가입</div>
                 <div style="width: 100%;">
                     <!-- 이름  입력 필드 -->
                     <div class="input-label">이름</div>
-                    <input type="text" class="input-field" placeholder="이름을 입력하세요" required>
+                    <input type="text" class="input-field" name="userName" placeholder="이름을 입력하세요" required>
+
                     <!-- ID 입력 필드 -->
                     <div class="input-label">아이디</div>
-                    <input type="text" class="input-field" placeholder="아이디를 입력하세요" required>
+                    <input type="text" class="input-field" name="userId" placeholder="아이디를 입력하세요" required>
+
                     <!-- PASSWORD 입력 필드 -->
                     <div class="input-label">비밀번호</div>
-                    <input type="password" class="input-field" placeholder="비밀번호를 입력하세요" required>
+                    <input type="password" class="input-field" name="password" placeholder="비밀번호를 입력하세요" required>
+
                     <div class="input-label">비밀번호 확인</div>
-                    <input type="password" class="input-field" placeholder="비밀번호를 다시 입력하세요" required>
-                    
+                    <input type="password" class="input-field" name="passwordConfirm" placeholder="비밀번호를 다시 입력하세요" required>
+
                     <!-- 닉네임 입력 필드 -->
                     <div class="input-label">닉네임</div>
-                    <input type="text" class="input-field" placeholder="사용할 닉네임을 입력하세요" required>
-                    
-                   <!-- 이메일 입력 필드 -->
+                    <input type="text" class="input-field" name="nickname" placeholder="사용할 닉네임을 입력하세요" required>
+
+                    <!-- 이메일 입력 필드 -->
                     <div class="input-label">이메일</div>
-                    <input type="text" class="input-field" placeholder="이메일을 입력하세요" required> 
+                    <input type="email" class="input-field" name="userEmail" placeholder="이메일을 입력하세요" required>
+
                     <!-- 전화번호 입력 필드 -->
                     <div class="input-label">전화번호</div>
-                    <input type="text" class="input-field" placeholder="전화번호를 입력하세요" required>
-                    
-                    
-                    
-                     <div class="form-check">
-                <input type="checkbox" id="privacyAgree" name="privacyAgree">
-                <label for="privacyAgree">[필수] 개인정보 수집 및 이용 약관 동의</label>
-           			 </div>
-            		<div class="form-check">
-                <input type="checkbox" id="marketingAgree" name="marketingAgree">
-                <label for="marketingAgree">[선택] 커뮤니티 이벤트 및 마케팅 정보 동의</label>
-          		  </div>
+                    <input type="text" class="input-field" name="phone" placeholder="전화번호를 입력하세요" required>
+
+                    <!-- 개인정보 수집 및 이용 약관 동의 -->
+                    <div class="form-check">
+                        <input type="checkbox" id="privacyAgree" name="privacyAgree" required>
+                        <label for="privacyAgree">[필수] 개인정보 수집 및 이용 약관 동의</label>
+                    </div>
+
+                    <!-- 마케팅 정보 동의 -->
+                    <div class="form-check">
+                        <input type="checkbox" id="marketingAgree" name="marketingAgree">
+                        <label for="marketingAgree">[선택] 커뮤니티 이벤트 및 마케팅 정보 동의</label>
+                    </div>
 
                     <!-- 회원가입 버튼 -->
                     <button type="submit" class="button_join">회원가입</button>
-                  
+
                 </div>
             </form>
          

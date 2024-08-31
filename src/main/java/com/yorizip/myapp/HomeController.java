@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -37,22 +37,22 @@ public class HomeController {
 	}
 	@RequestMapping(value = "/Index", method = RequestMethod.POST)
 	public String Index(Locale locale, Model model) {
-		logger.info("Index ¼º°ø", locale);
+		logger.info("Index ï¿½ï¿½ï¿½ï¿½", locale);
 
 		return "/minigame/Index";
 	}
-		// ±âÁ¸ GET ¸Þ¼­µå
+		// ï¿½ï¿½ï¿½ï¿½ GET ï¿½Þ¼ï¿½ï¿½ï¿½
 		@RequestMapping(value = "/main", method = RequestMethod.GET)
 		public String mainGet(Locale locale, Model model) {
-			// GET ¿äÃ» Ã³¸® ·ÎÁ÷
-			return "minigame/main";  // JSP ÆÄÀÏ °æ·Î ¹ÝÈ¯
+			// GET ï¿½ï¿½Ã» Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			return "minigame/main";  // JSP ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 		}
 
-		// POST ¿äÃ» Ã³¸® ¸Þ¼­µå Ãß°¡
+		// POST ï¿½ï¿½Ã» Ã³ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 		@RequestMapping(value = "/main", method = RequestMethod.POST)
 		public String mainPost(Locale locale, Model model) {
-			// POST ¿äÃ» Ã³¸® ·ÎÁ÷
-			return "minigame/main";  // JSP ÆÄÀÏ °æ·Î ¹ÝÈ¯
+			// POST ï¿½ï¿½Ã» Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			return "minigame/main";  // JSP ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 		}
 
 	@RequestMapping(value = "/result", method = RequestMethod.GET)

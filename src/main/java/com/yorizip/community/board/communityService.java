@@ -3,18 +3,18 @@ package com.yorizip.community.board;
 import java.util.List;
 
 public interface communityService {
-	// ±Ûµî·Ï
+	// ï¿½Ûµï¿½ï¿½
 	void insertBoard(communityVO vo);
-	
-	// ±Û ¼öÁ¤
+
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	void updateBoard(communityVO vo);
-	
-	// ±Û »èÁ¦
+
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	void deleteBoard(communityVO vo);
-	
-	// ±Û »ó¼¼ Á¶È¸
+
+	// ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È¸
 	communityVO getBoard(communityVO vo);
-	
-	// ±Û ¸ñ·Ï Á¶È¸
+
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 	List<communityVO> getBoardList(communityVO vo);
 }

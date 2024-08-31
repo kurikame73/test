@@ -12,19 +12,60 @@
       <org.springframework-version>5.3.19</org.springframework-version> <!-- 다른점 참고 -->
       <org.aspectj-version>1.6.10</org.aspectj-version>
       <org.slf4j-version>1.6.6</org.slf4j-version>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- 추가 -->
-      <maven.compiler.source>11</maven.compiler.source> <!-- 추가 -->
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+       <maven.compiler.source>11</maven.compiler.source> <!-- 추가 -->
       <maven.compiler.target>11</maven.compiler.target> <!-- 추가 -->
    </properties>
    <dependencies>
-   
+
    <dependency>
          <groupId>javax.websocket</groupId>
          <artifactId>javax.websocket-api</artifactId>
          <version>1.1</version>
       </dependency>
-      
-      <!--경민 추가  -->
+
+       <dependency>
+           <groupId>org.mybatis</groupId>
+           <artifactId>mybatis</artifactId>
+           <version>3.5.10</version> <!-- You can replace this with the latest stable version if newer -->
+       </dependency>
+
+       <dependency>
+           <groupId>org.mybatis</groupId>
+           <artifactId>mybatis-spring</artifactId>
+           <version>2.0.6</version>
+       </dependency>
+
+       <!-- MySQL 드라이버 -->
+       <dependency>
+           <groupId>mysql</groupId>
+           <artifactId>mysql-connector-java</artifactId>
+           <version>8.0.33</version> <!-- 최신 버전을 사용하는 것이 좋습니다 -->
+       </dependency>
+
+       <!-- Servlet API -->
+       <dependency>
+           <groupId>javax.servlet</groupId>
+           <artifactId>javax.servlet-api</artifactId>
+           <version>4.0.1</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-dbcp2</artifactId>
+           <version>2.9.0</version>
+       </dependency>
+
+       <!-- Bcrypt 라이브러리 -->
+       <dependency>
+           <groupId>org.mindrot</groupId>
+           <artifactId>jbcrypt</artifactId>
+           <version>0.4</version>
+       </dependency>
+
+       <!--경민 추가  -->
    <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-web</artifactId>
@@ -35,7 +76,7 @@
     <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-xml</artifactId>
-        <version>2.13.3</version>
+        <version>2.13.0</version>
     </dependency>
     
     <!-- HTTP Client -->
@@ -50,7 +91,7 @@
    <dependency>
     <groupId>org.json</groupId>
     <artifactId>json</artifactId>
-    <version>20210307</version> <!-- 버전은 최신 버전을 사용하는 것이 좋습니다 -->
+    <version>20231013</version> <!-- 버전은 최신 버전을 사용하는 것이 좋습니다 -->
 </dependency>
 
 

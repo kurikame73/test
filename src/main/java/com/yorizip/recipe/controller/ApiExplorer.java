@@ -10,14 +10,14 @@ import java.net.URLEncoder;
 public class ApiExplorer {
     public static void main(String[] args) {
         try {
-            // ±âº» API URL ¹× ÇÊ¼ö ÆÄ¶ó¹ÌÅÍ ¼³Á¤
-            String apiKey = "67f9fcdd1106497bb4f2"; // ½ÇÁ¦ API Å°·Î º¯°æ
-            String serviceId = "COOKRCP01"; // ¼­ºñ½º ID
-            String dataType = "json"; // ¿äÃ» ÆÄÀÏ Å¸ÀÔ
-            String startIdx = "1"; // ¿äÃ» ½ÃÀÛ À§Ä¡
-            String endIdx = "5"; // ¿äÃ» Á¾·á À§Ä¡
+            // ï¿½âº» API URL ï¿½ï¿½ ï¿½Ê¼ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            String apiKey = "67f9fcdd1106497bb4f2"; // ï¿½ï¿½ï¿½ï¿½ API Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            String serviceId = "COOKRCP01"; // ï¿½ï¿½ï¿½ï¿½ ID
+            String dataType = "json"; // ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½
+            String startIdx = "1"; // ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+            String endIdx = "5"; // ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
 
-            // URLÀ» ±¸¼ºÇÕ´Ï´Ù.
+            // URLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
             StringBuilder urlBuilder = new StringBuilder("http://openapi.foodsafetykorea.go.kr/api/");
             urlBuilder.append(apiKey)
                       .append("/")
@@ -29,12 +29,12 @@ public class ApiExplorer {
                       .append("/")
                       .append(endIdx);
 
-            // URL °´Ã¼¸¦ »ý¼ºÇÏ°í HTTP ¿¬°áÀ» ¿±´Ï´Ù.
+            // URL ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ HTTP ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½.
             URL url = new URL(urlBuilder.toString());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-            System.out.println("Response code: " + conn.getResponseCode()); // ÀÀ´ä ÄÚµå Ãâ·Â
+            System.out.println("Response code: " + conn.getResponseCode()); // ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½
 
             BufferedReader rd;
             if (conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
@@ -43,7 +43,7 @@ public class ApiExplorer {
                 rd = new BufferedReader(new InputStreamReader(conn.getErrorStream(), "UTF-8"));
             }
 
-            // ÀÀ´ä °á°ú¸¦ ÀÐ¾îµéÀÔ´Ï´Ù.
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
             StringBuilder sb = new StringBuilder();
             String line;
             while ((line = rd.readLine()) != null) {
@@ -51,7 +51,7 @@ public class ApiExplorer {
             }
             rd.close();
             conn.disconnect();
-            System.out.println(sb.toString()); // ÀÀ´ä °á°ú Ãâ·Â
+            System.out.println(sb.toString()); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         } catch (IOException e) {
             e.printStackTrace();
         }
