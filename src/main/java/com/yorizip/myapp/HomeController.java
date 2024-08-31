@@ -33,13 +33,13 @@ public class HomeController {
 
 		model.addAttribute("serverTime", formattedDate );
 
-		return "/minigame/Index";
+		return "Index";
 	}
 	@RequestMapping(value = "/Index", method = RequestMethod.POST)
 	public String Index(Locale locale, Model model) {
 		logger.info("Index ����", locale);
 
-		return "/minigame/Index";
+		return "Index";
 	}
 		// ���� GET �޼���
 		@RequestMapping(value = "/main", method = RequestMethod.GET)

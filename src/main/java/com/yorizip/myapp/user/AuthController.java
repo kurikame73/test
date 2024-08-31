@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
+//@RequestMapping("/myapp")
 public class AuthController {
 
     private final UserService userService;
@@ -34,7 +35,7 @@ public class AuthController {
         if (!password.equals(passwordConfirm)) {
             log.info("%%%%%%%%%%%%%%%%");
             model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
-            return "redirect:/join/join.jsp";
+            return "redirect:/join/joinKakao.jsp";
         }
 
         Map<String, Object> userInfo = (Map<String, Object>) session.getAttribute("userInfo");
@@ -73,10 +74,11 @@ public class AuthController {
                                @RequestParam boolean privacyAgree,
                                Model model,
                                HttpSession session) {
+        log.info("%%%%%%%%%%%%%%%%");
         if (!password.equals(passwordConfirm)) {
             log.info("%%%%%%%%%%%%%%%%");
             model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
-            return "redirect:/join/join.jsp";
+            return "redirect:/myapp/join/join.jsp";
         }
 
         UserVO user = userService.registerUserNo(userName, password, nickname, userEmail, phone);
@@ -119,7 +121,7 @@ public class AuthController {
     @GetMapping("/auth/kakao")
     public String kakaoAuth() {
         String clientId = "920865d3fcdbfd024c9e2f35b102beb6"; // 실제 클라이언트 ID로 교체
-        String redirectUri = "http://localhost:8080/auth/login/kakao";
+        String redirectUri = "http://localhost:8888/myapp/auth/login/kakao";
         String kakaoAuthUrl = "https://kauth.kakao.com/oauth/authorize"
                 + "?client_id=" + clientId
                 + "&redirect_uri=" + redirectUri
@@ -130,7 +132,7 @@ public class AuthController {
     @GetMapping("/auth/naver")
     public String naverAuth() {
         String clientId = "tsCjaf_Sguy3on43jxmt"; // 실제 클라이언트 ID로 교체
-        String redirectUri = "http://localhost:8080/auth/login/naver"; // 실제 리다이렉트 URI로 교체
+        String redirectUri = "http://localhost:8888/myapp/auth/login/naver"; // 실제 리다이렉트 URI로 교체
         String state = ""; // 실제 상태 값으로 교체
 
         String naverAuthUrl = "https://nid.naver.com/oauth2.0/authorize"
@@ -147,11 +149,18 @@ public class AuthController {
         try {
             String accessToken = userService.getKakaoAccessToken(code);
 
-            Map<String, Object> userInfo = userService.getNaverUserInfo(accessToken);
-            Map<String, Object> kakaoAccount = (Map<String, Object>) userInfo.get("na");
+            log.info("$$$$$$$$$$$accessToken = {}", accessToken);
+            Map<String, Object> userInfo = userService.getKakaoUserInfo(accessToken);
+            log.info("$$$$$$$$$$$accessToken = {}", userInfo);
+
+            Map<String, Object> kakaoAccount = (Map<String, Object>) userInfo.get("kakao_account");
+            log.info("$$$$$$$$$$$accessToken = {}", kakaoAccount);
+
             String email = (String) kakaoAccount.get("email");
+            log.info("$$$$$$$$$$$accessToken = {}", email);
 
             UserVO user = userService.getUserByEmail(email);
+            log.info("$$$$$$$$$$$accessToken = {}", user);
 
             Boolean isUser = userService.handleKakaoUser(userInfo);
             session.setAttribute("userInfo", userInfo);
@@ -167,7 +176,7 @@ public class AuthController {
             return "redirect:/main/main.jsp";
         } catch (Exception e) {
             e.printStackTrace();
-            return "redirect:/login-error"; // 에러 페이지로 리다이렉트
+            return "redirect:/join/join.jsp"; // 에러 페이지로 리다이렉트
         }
     }
 
@@ -175,13 +184,20 @@ public class AuthController {
     public String naverLogin(@RequestParam String code, HttpSession session) {
         try {
             String accessToken = userService.getNaverAccessToken(code);
+            log.info("$$$$$$$$$$$accessToken = {}", accessToken);
+
 
             Map<String, Object> userInfo = userService.getNaverUserInfo(accessToken);
+            log.info("$$$$$$$$$$$accessToken = {}", userInfo);
 
             Map<String, Object> response = (Map<String, Object>) userInfo.get("response");
+            log.info("$$$$$$$$$$$accessToken = {}", response);
+
             String email = (String) response.get("email");
+            log.info("$$$$$$$$$$$accessToken = {}", email);
 
             UserVO user = userService.getUserByEmail(email);
+            log.info("$$$$$$$$$$$accessToken = {}", user);
 
             Boolean isUser = userService.handleNaverUser(userInfo);
             session.setAttribute("userInfo", userInfo);

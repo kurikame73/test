@@ -30,12 +30,12 @@
         <div class="login-buttons">
             <!-- 카카오 로그인 버튼 -->
             <div class="text-center">
-                <a href="/auth/kakao">
+                <a href="/myapp/auth/kakao">
                     <img src="${pageContext.request.contextPath}/static/images/login/kakao_login_medium_narrow.png" alt="카카오 로그인" class="kakao-img">
                 </a>
             </div>
             <div class="text-center">
-                <a href="http://localhost:8080/auth/naver">
+                <a href="/myapp/auth/naver">
                     <img src="${pageContext.request.contextPath}/static/images/login/kakao_login_medium_narrow.png" alt="카카오 로그인" class="kakao-img">
                 </a>
             </div>
@@ -53,7 +53,7 @@
          
         </div>
         <div class="signup">
-            <p>아직 회원이 아니신가요? <a href="/join/join.jsp">회원가입</a></p>
+            <p>아직 회원이 아니신가요? <a href="/myapp/join/join.jsp">회원가입</a></p>
         </div>
     </div>
 

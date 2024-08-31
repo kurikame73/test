@@ -96,7 +96,7 @@ public class UserService {
 
     public String getKakaoAccessToken(String code) {
         String clientId = "920865d3fcdbfd024c9e2f35b102beb6";
-        String redirectUri = "http://localhost:8080/auth/login/kakao";
+        String redirectUri = "http://localhost:8888/myapp/auth/login/kakao";
 
         // 액세스 토큰 요청
         String tokenUrl = "https://kauth.kakao.com/oauth/token";
@@ -120,7 +120,7 @@ public class UserService {
     public String getNaverAccessToken(String code) {
         String clientId = "tsCjaf_Sguy3on43jxmt"; // 실제 클라이언트 ID로 교체
         String clientSecret = "F5BCjIhXHv"; // 실제 클라이언트 시크릿으로 교체
-        String redirectUri = "http://localhost:8080/auth/login/naver"; // 실제 리다이렉트 URI로 교체
+        String redirectUri = "http://localhost:8888/myapp/auth/login/naver"; // 실제 리다이렉트 URI로 교체
 
         // 액세스 토큰 요청
         String tokenUrl = "https://nid.naver.com/oauth2.0/token";
