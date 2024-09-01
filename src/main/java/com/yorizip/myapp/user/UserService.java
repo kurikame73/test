@@ -3,8 +3,6 @@ package com.yorizip.myapp.user;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,17 +10,10 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Service
 public class UserService {
-    @Value("${kakao.client.id}")
-    private String clientId;
-
-    @Value("${kakao.redirect.uri}")
-    private String redirectUri;
-
     private final UserMapper userMapper;
     private final SocialLoginMapper socialLoginMapper;
     private final AuthProviderMapper authProviderMapper;
