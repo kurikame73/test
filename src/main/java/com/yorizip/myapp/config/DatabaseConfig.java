@@ -31,8 +31,8 @@ public class DatabaseConfig {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL 드라이버를 사용하는 예시
-        dataSource.setUrl("jdbc:mysql://localhost:3306/soomgo"); // 데이터베이스 URL
-        dataSource.setUsername("root"); // 데이터베이스 사용자 이름
+        dataSource.setUrl("jdbc:mysql://soomgo.c7k1ulhtgd52.ap-northeast-2.rds.amazonaws.com:3306/soomgo"); // RDS 엔드포인트 및 데이터베이스 이름
+        dataSource.setUsername("admin"); // 데이터베이스 사용자 이름
         dataSource.setPassword("abcd1234"); // 데이터베이스 비밀번호
         return dataSource;
     }
