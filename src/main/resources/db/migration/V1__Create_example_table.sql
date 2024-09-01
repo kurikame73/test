@@ -1,6 +1,5 @@
 -- users 테이블 삭제 및 재생성
 DROP TABLE IF EXISTS `soomgo`.`users`;
-
 CREATE TABLE `soomgo`.`users` (
                                   `user_id` INT NOT NULL AUTO_INCREMENT,
                                   `user_name` VARCHAR(100) NOT NULL,
@@ -15,21 +14,20 @@ CREATE TABLE `soomgo`.`users` (
 );
 
 -- SocialLogin 테이블 삭제 및 재생성
-DROP TABLE IF EXISTS `SocialLogin`;
-
-CREATE TABLE `SocialLogin` (
-                               `socialId` INT PRIMARY KEY AUTO_INCREMENT,
-                               `socialCompany` VARCHAR(255) NOT NULL,
-                               `socialLoginId` VARCHAR(255) NOT NULL,
-                               `token` VARCHAR(512) NOT NULL,
-                               `userId` INT NOT NULL
+DROP TABLE IF EXISTS `social_logins`;
+CREATE TABLE `soomgo`.`social_logins` (
+                                `social_id` INT PRIMARY KEY AUTO_INCREMENT,
+                                `social_company` VARCHAR(255) NOT NULL,
+                                `social_login_id` VARCHAR(255) NOT NULL,
+                                `token` VARCHAR(512) NOT NULL,
+                                `user_id` INT NOT NULL
 );
 
 -- AuthProvider 테이블 삭제 및 재생성
-DROP TABLE IF EXISTS `AuthProvider`;
+DROP TABLE IF EXISTS `auth_providers`;
 
-CREATE TABLE `AuthProvider` (
-                                `providerId` INT PRIMARY KEY AUTO_INCREMENT,
-                                `providerName` VARCHAR(255) NOT NULL,
-                                `providerType` VARCHAR(255) NOT NULL
+CREATE TABLE `soomgo`.`auth_providers` (
+                                 `provider_id` INT PRIMARY KEY AUTO_INCREMENT,
+                                 `provider_name` VARCHAR(255) NOT NULL,
+                                 `provider_type` VARCHAR(255) NOT NULL
 );
