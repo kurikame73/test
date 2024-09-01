@@ -163,6 +163,8 @@ public class AuthController {
             Boolean isUser = userService.handleKakaoUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
+            log.info("$$$$$$$$$$$accessToken = {}", isUser);
+
             log.info("user has been stored in session: {}", session.getAttribute("user"));
             log.info("userInfo has been stored in session: {}", session.getAttribute("userInfo"));
 

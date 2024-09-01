@@ -18,7 +18,7 @@
     <!-- 로그인 박스 (컨테이너로 감싸서 중앙 정렬) -->
     <div class="container">
         <div class="login-box">
-            <form action="/auth/login" method="get">
+            <form action="/myapp/auth/login" method="get">
                 <div class="login-header">로그인</div>
                 <div style="width: 100%;">
                     <!-- ID 입력 필드 -->
