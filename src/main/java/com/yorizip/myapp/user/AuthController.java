@@ -10,7 +10,6 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
-//@RequestMapping("/myapp")
 public class AuthController {
 
     private final UserService userService;
