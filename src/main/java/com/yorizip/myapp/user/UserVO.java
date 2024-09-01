@@ -35,14 +35,6 @@ public class UserVO {
         this.userId = userId;
     }
 
-    public String getProfileImgUrl() {
-        return profileImgUrl;
-    }
-
-    public void setProfileImgUrl(String profileImgUrl) {
-        this.profileImgUrl = profileImgUrl;
-    }
-
     // 기본 생성자
     public UserVO() {}
 
@@ -121,6 +113,15 @@ public class UserVO {
     public void setAuthProviderID(int authProviderID) {
         this.authProviderID = authProviderID;
     }
+
+    public String getProfileImgUrl() {
+        return profileImgUrl;
+    }
+
+    public void setProfileImgUrl(String profileImgUrl) {
+        this.profileImgUrl = profileImgUrl;
+    }
+
 
     @Override
     public String toString() {

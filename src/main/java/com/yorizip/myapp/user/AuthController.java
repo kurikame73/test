@@ -35,32 +35,30 @@ public class AuthController {
         if (!password.equals(passwordConfirm)) {
             log.info("%%%%%%%%%%%%%%%%");
             model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
-            return "redirect:/join/joinKakao.jsp";
+            return "redirect:/myapp/join/joinKakao.jsp";
         }
 
         Map<String, Object> userInfo = (Map<String, Object>) session.getAttribute("userInfo");
-        String profileImgUrl = null;
-        String socialPlatform = null;
 
         if (userInfo.containsKey("properties")) {
             // 카카오 사용자 정보 처리
             Map<String, Object> properties = (Map<String, Object>) userInfo.get("properties");
-            profileImgUrl = (String) properties.get("profile_image");
-            socialPlatform = "Kakao";
+            String profileImgUrl = (String) properties.get("profile_image");
+            String socialPlatform = "Kakao";
+            log.info("Profile Image URL: {}", profileImgUrl);
+            UserVO user = userService.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
+            log.info("UserVO : {}", user);
         } else if (userInfo.containsKey("response")) {
             // 네이버 사용자 정보 처리
             Map<String, Object> response = (Map<String, Object>) userInfo.get("response");
-            profileImgUrl = (String) response.get("profile_image");
-            socialPlatform = "Naver";
+            String profileImgUrl = (String) response.get("profile_image");
+            String socialPlatform = "Naver";
+            log.info("Profile Image URL: {}", profileImgUrl);
+            UserVO user = userService.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
+            log.info("UserVO : {}", user);
         }
-
-        log.info("Profile Image URL: {}", profileImgUrl);
-
-        UserVO user = userService.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
-
         return "redirect:/login/login.jsp";
     }
-
 
     @PostMapping("/user/register/no")
     public String registerUserNo(@RequestParam String userName,
@@ -170,7 +168,7 @@ public class AuthController {
 
             if (!isUser) {
                 log.info("##################1111");
-                return "redirect:/join/join.jsp";
+                return "redirect:/join/joinKakao.jsp";
             }
             session.setAttribute("user", user);
             return "redirect:/main/main.jsp";
@@ -207,7 +205,7 @@ public class AuthController {
 
             if (!isUser) {
                 log.info("User is not registered, redirecting to join page");
-                return "redirect:/join/join.jsp";
+                return "redirect:/join/joinKakao.jsp";
             }
 
             return "redirect:/main/main.jsp";

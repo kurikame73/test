@@ -117,7 +117,7 @@
 <!-- 회원가입 박스 (컨테이너로 감싸서 중앙 정렬) -->
 <div class="container">
     <div class="join-box">
-        <form action="/user/register" method="post">
+        <form action="/myapp/user/register" method="post">
             <div class="join-header">회원가입</div>
             <div style="width: 100%;">
                 <!-- 이름  입력 필드 -->
