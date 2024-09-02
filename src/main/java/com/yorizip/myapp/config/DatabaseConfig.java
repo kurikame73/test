@@ -13,19 +13,19 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DatabaseConfig {
-    @Bean
-    public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
-        DataSourceInitializer initializer = new DataSourceInitializer();
-        initializer.setDataSource(dataSource);
-        initializer.setDatabasePopulator(databasePopulator());
-        return initializer;
-    }
+//    @Bean
+//    public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
+//        DataSourceInitializer initializer = new DataSourceInitializer();
+//        initializer.setDataSource(dataSource);
+//        initializer.setDatabasePopulator(databasePopulator());
+//        return initializer;
+//    }
 
-    private DatabasePopulator databasePopulator() {
-        ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-        populator.addScript(new ClassPathResource("db/migration/V1__Create_example_table.sql"));
-        return populator;
-    }
+//    private DatabasePopulator databasePopulator() {
+//        ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
+//        populator.addScript(new ClassPathResource("db/migration/V1__Create_example_table.sql"));
+//        return populator;
+//    }
 
 //    @Bean
 //    public DataSource dataSource() {
@@ -47,17 +47,17 @@ public class DatabaseConfig {
         return dataSource;
     }
 
-    @Bean
-    public Flyway flyway(DataSource dataSource) {
-        // Flyway 설정
-        Flyway flyway = Flyway.configure()
-                .dataSource(dataSource)
-                .locations("classpath:db/migration")
-                .baselineOnMigrate(true)
-                .load();
-        // Flyway 마이그레이션 실행
-        flyway.migrate();
-        return flyway;
-    }
+//    @Bean
+//    public Flyway flyway(DataSource dataSource) {
+//        // Flyway 설정
+//        Flyway flyway = Flyway.configure()
+//                .dataSource(dataSource)
+//                .locations("classpath:db/migration")
+//                .baselineOnMigrate(true)
+//                .load();
+//        // Flyway 마이그레이션 실행
+//        flyway.migrate();
+//        return flyway;
+//    }
 
 }

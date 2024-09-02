@@ -23,5 +23,5 @@
     <tx:annotation-driven transaction-manager="transactionManager" />
 
     <!-- Property Placeholder 설정 -->
-    <context:property-placeholder location="classpath:application.yml" />
+<!--    <context:property-placeholder location="classpath:application.yml" />-->
 </beans>
