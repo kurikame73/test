@@ -27,12 +27,22 @@ public class DatabaseConfig {
         return populator;
     }
 
+//    @Bean
+//    public DataSource dataSource() {
+//        BasicDataSource dataSource = new BasicDataSource();
+//        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL 드라이버를 사용하는 예시
+//        dataSource.setUrl("jdbc:mysql://soomgo.c7k1ulhtgd52.ap-northeast-2.rds.amazonaws.com:3306/soomgo"); // RDS 엔드포인트 및 데이터베이스 이름
+//        dataSource.setUsername("admin"); // 데이터베이스 사용자 이름
+//        dataSource.setPassword("abcd1234"); // 데이터베이스 비밀번호
+//        return dataSource;
+//    }
+
     @Bean
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL 드라이버를 사용하는 예시
-        dataSource.setUrl("jdbc:mysql://soomgo.c7k1ulhtgd52.ap-northeast-2.rds.amazonaws.com:3306/soomgo"); // RDS 엔드포인트 및 데이터베이스 이름
-        dataSource.setUsername("admin"); // 데이터베이스 사용자 이름
+        dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver"); // Oracle 드라이버 설정
+        dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe"); // Oracle XE 버전의 기본 URL (localhost:1521과 xe)
+        dataSource.setUsername("soomgo"); // 데이터베이스 사용자 이름
         dataSource.setPassword("abcd1234"); // 데이터베이스 비밀번호
         return dataSource;
     }

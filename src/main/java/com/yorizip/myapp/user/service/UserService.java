@@ -1,5 +1,11 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.service;
 
+import com.yorizip.myapp.user.mapper.AuthProviderMapper;
+import com.yorizip.myapp.user.mapper.SocialLoginMapper;
+import com.yorizip.myapp.user.mapper.UserMapper;
+import com.yorizip.myapp.user.vo.AuthProviderVO;
+import com.yorizip.myapp.user.vo.SocialLoginVO;
+import com.yorizip.myapp.user.vo.UserVO;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

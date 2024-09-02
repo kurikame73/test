@@ -1,5 +1,7 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.controller;
 
+import com.yorizip.myapp.user.vo.UserVO;
+import com.yorizip.myapp.user.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

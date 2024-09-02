@@ -1,4 +1,4 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

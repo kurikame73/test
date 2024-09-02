@@ -1,4 +1,4 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.vo;
 
 public class AuthProviderVO {
     private int providerId;

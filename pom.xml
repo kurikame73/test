@@ -33,6 +33,12 @@
        </dependency>
 
        <dependency>
+           <groupId>com.oracle.database.jdbc</groupId>
+           <artifactId>ojdbc8</artifactId>
+           <version>19.8.0.0</version>
+       </dependency>
+
+       <dependency>
            <groupId>org.mybatis</groupId>
            <artifactId>mybatis</artifactId>
            <version>3.5.10</version> <!-- You can replace this with the latest stable version if newer -->

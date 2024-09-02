@@ -1,5 +1,6 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.mapper;
 
+import com.yorizip.myapp.user.vo.SocialLoginVO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 

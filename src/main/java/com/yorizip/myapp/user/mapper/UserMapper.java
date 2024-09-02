@@ -1,5 +1,8 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.mapper;
 
+import com.yorizip.myapp.user.vo.AuthProviderVO;
+import com.yorizip.myapp.user.vo.SocialLoginVO;
+import com.yorizip.myapp.user.vo.UserVO;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
