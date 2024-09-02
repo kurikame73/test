@@ -30,7 +30,7 @@
             <ul>
                 <!-- 로그인 상태에 따라 표시할 항목들 -->
                 <c:choose>
-                    <c:when test="${not empty sessionScope.userInfo}">
+                    <c:when test="${not empty sessionScope.user}">
                         <li class="mypage"><a href="#">마이페이지</a></li>
                         <li class="logout"><a href="${pageContext.request.contextPath}/logout">로그아웃</a></li>
                     </c:when>
