@@ -1,5 +1,7 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.controller;
 
+import com.yorizip.myapp.user.vo.UserVO;
+import com.yorizip.myapp.user.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -10,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
-//@RequestMapping("/myapp")
 public class AuthController {
 
     private final UserService userService;
@@ -163,6 +164,8 @@ public class AuthController {
             Boolean isUser = userService.handleKakaoUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
+            log.info("$$$$$$$$$$$accessToken = {}", isUser);
+
             log.info("user has been stored in session: {}", session.getAttribute("user"));
             log.info("userInfo has been stored in session: {}", session.getAttribute("userInfo"));
 

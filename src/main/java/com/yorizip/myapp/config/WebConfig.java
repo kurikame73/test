@@ -22,7 +22,7 @@ import java.util.Collections;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = "com.yorizip.myapp")
-@PropertySource("classpath:application.yml")
+//@PropertySource("classpath:application.yml")
 public class WebConfig implements WebMvcConfigurer {
     @Bean
     public RestTemplate restTemplate() {

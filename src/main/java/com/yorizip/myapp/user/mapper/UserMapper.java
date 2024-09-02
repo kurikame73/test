@@ -1,5 +1,8 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.mapper;
 
+import com.yorizip.myapp.user.vo.AuthProviderVO;
+import com.yorizip.myapp.user.vo.SocialLoginVO;
+import com.yorizip.myapp.user.vo.UserVO;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -7,8 +10,8 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
     @Insert("INSERT INTO users (user_name, nickname, hashed_password, phone, user_email, auth_provider_id, profile_image) " +
-            "VALUES (#{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID}, #{profileImgUrl})")
-    @Options(useGeneratedKeys = true, keyProperty = "userId")
+            "VALUES (#{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID}, #{profileImgUrl, jdbcType=VARCHAR})")
+    @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
     void insertUser(UserVO user);
 
 

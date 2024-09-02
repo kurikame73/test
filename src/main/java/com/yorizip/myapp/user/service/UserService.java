@@ -1,5 +1,11 @@
-package com.yorizip.myapp.user;
+package com.yorizip.myapp.user.service;
 
+import com.yorizip.myapp.user.mapper.AuthProviderMapper;
+import com.yorizip.myapp.user.mapper.SocialLoginMapper;
+import com.yorizip.myapp.user.mapper.UserMapper;
+import com.yorizip.myapp.user.vo.AuthProviderVO;
+import com.yorizip.myapp.user.vo.SocialLoginVO;
+import com.yorizip.myapp.user.vo.UserVO;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +26,7 @@ public class UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Transactional
-    public int saveUser(UserVO user) {
+    public Long saveUser(UserVO user) {
         userMapper.insertUser(user);
         return user.getUserId();
     }
@@ -236,7 +242,7 @@ public class UserService {
 
         // User 정보 저장
         userMapper.insertUser(user);
-        int userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
+        Long userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
         logger.info("Received 4: {}", userEmail);
 
         // 소셜 로그인 정보 처리
@@ -272,7 +278,7 @@ public class UserService {
 
         // User 정보 저장
         userMapper.insertUser(user);
-        int userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
+        Long userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
         logger.info("Received 4: {}", userEmail);
 
         return user;
