@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserVO {
     private Long id;
-    private String userId; // 사용자 ID
+    private Long userId; // 사용자 ID
     private String userName;
     private String nickname;
     private String hashedPassword;
@@ -31,7 +31,7 @@ public class UserVO {
         this.userEmail = userEmail;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -73,7 +73,7 @@ public class UserVO {
     // Getter와 Setter 메서드
 
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
