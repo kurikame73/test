@@ -51,4 +51,11 @@ public interface UserMapper {
 
     @Update("UPDATE users SET user_name = #{userName}, nickname = #{nickname}, hashed_password = #{hashedPassword}, profile_image = #{profileImgUrl} WHERE user_email = #{userEmail}")
     void updateUser(UserVO user);
+
+    @Insert("INSERT INTO user_favorite_recipes (user_id, recipe_id) VALUES (#{userId}, #{recipeId})")
+    void insertFavoriteRecipe(@Param("userId") Long userId, @Param("recipeId") Long recipeId);
+
+    @Select("SELECT recipe_id FROM user_favorite_recipes WHERE user_id = #{userId}")
+    List<Long> getFavoriteRecipesByUserId(Long userId);
+
 }
