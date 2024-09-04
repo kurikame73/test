@@ -1,6 +1,7 @@
 package com.yorizip.myapp.Auth.service;
 
 import com.yorizip.myapp.user.service.UserService;
+import com.yorizip.myapp.user.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
@@ -70,6 +71,32 @@ public class AuthService {
         boolean isUserHandled = oauthService.handleUser(userInfo, provider);
         log.info("User handling result: {}", isUserHandled);
 
-        return isUserHandled;
+        if (isUserHandled) {
+            String email = null;
+
+            // 카카오의 경우
+            if ("kakao".equalsIgnoreCase(provider)) {
+                email = (String) ((Map<String, Object>) userInfo.get("kakao_account")).get("email");
+            }
+            // 네이버의 경우
+            else if ("naver".equalsIgnoreCase(provider)) {
+                email = (String) ((Map<String, Object>) userInfo.get("response")).get("email");
+            }
+
+            if (email != null) {
+                UserVO userVO = userService.findUserByEmail(email);
+                if (userVO != null) {
+                    httpSession.setAttribute("user", userVO); // 세션에 UserVO 저장
+                    log.info("User stored in session: {}", userVO);
+                    return true;
+                } else {
+                    log.error("User not found with email: {}", email);
+                }
+            } else {
+                log.error("Failed to retrieve email from userInfo for provider: {}", provider);
+            }
+        }
+
+        return false;
     }
 }

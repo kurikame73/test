@@ -62,17 +62,12 @@ public interface UserMapper {
 //            "VALUES (#{providerId}, #{providerName}, #{providerType})")
 //    void insertAuthProvider(AuthProviderVO authProvider);
 //
-//    @Update("UPDATE users SET user_name = #{userName}, nickname = #{nickname}, hashed_password = #{hashedPassword}, profile_image = #{profileImgUrl} WHERE user_email = #{userEmail}")
-//    void updateUser(UserVO user);
-//
-//    @Insert("INSERT INTO user_favorite_recipes (user_id, recipe_id) VALUES (#{userId}, #{recipeId})")
-//    void insertFavoriteRecipe(@Param("userId") Long userId, @Param("recipeId") Long recipeId);
-//
-//    @Select("SELECT recipe_id FROM user_favorite_recipes WHERE user_id = #{userId}")
-//    List<Long> getFavoriteRecipesByUserId(Long userId);
+    @Update("UPDATE users SET user_name = #{userName}, nickname = #{nickname}, hashed_password = #{hashedPassword}, profile_image = #{profileImgUrl} WHERE user_email = #{userEmail}")
+    void updateUser(UserVO user);
 
-    @Select("SELECT user_id AS userId, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
+    @Select("SELECT id, user_id AS userId, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
     @ConstructorArgs({
+            @Arg(column = "id", javaType = Long.class), // 고유키 id 매핑
             @Arg(column = "userId", javaType = String.class),
             @Arg(column = "userName", javaType = String.class),
             @Arg(column = "nickname", javaType = String.class),

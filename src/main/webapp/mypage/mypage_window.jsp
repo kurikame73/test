@@ -28,7 +28,7 @@
                 <a href="/myapp/mypage/mypage_userinfo.jsp">회원정보 수정</a>
                 <a href="">찜한 쿠킹일지</a>
                 <a href="">나의 쿠킹일지</a>
-                <a href="/myapp/${sessionScope.userId}/favorite">스크랩 레시피</a>
+                <a href="/myapp/${sessionScope.user.id}/favorite">스크랩 레시피</a>
                 <a href=" ">로그아웃</a>
             </div>
         </div>

@@ -123,7 +123,6 @@
 
 <script>
 
-    var userId = '<c:out value="${sessionScope.userId}"/>';
     const aaa = new URLSearchParams(window.location.search);
     const bbb = aaa.get('recipeId');
     $(document).ready(function () {
@@ -222,16 +221,19 @@
 </script>
 
 <script>
+    const userId = '<c:out value="${sessionScope.user.id}"/>';
     const zzz = new URLSearchParams(window.location.search);
     const ccc = zzz.get('recipeId');
     console.log("##############$$$$$$$$$#" + ccc);
     const recipeId = Number(ccc);
     console.log("##############$$$$$$$$$#" + recipeId);
+    console.log("##############$$$$$$$$$#" + userId);
+
 
     // 스크랩 버튼 클릭 시 AJAX 요청
     $('#scrapButton').on('click', function () {
         $.ajax({
-            url: `http://localhost:8888/myapp/${userId}/favorite`,
+            url: `http://localhost:8888/myapp/${sessionScope.user.id}/favorite`,
             method: 'POST', // POST 요청으로 스크랩을 처리
             contentType: 'application/json', // JSON 형식으로 요청 본문을 전송
             data: JSON.stringify({ recipeId: recipeId }), // recipeId를 JSON 객체로 전송
