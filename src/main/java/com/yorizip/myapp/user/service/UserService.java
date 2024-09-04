@@ -17,6 +17,10 @@ public class UserService {
     private final UserMapper userMapper;
     private final HttpSession httpSession;
 
+    public boolean isEmailExists(String email) {
+        return userMapper.getUserByEmail(email) != null;
+    }
+
     public void registerUser(UserRegisterRequestDto userDto) {
         Map<String, Object> userInfo = (Map<String, Object>) httpSession.getAttribute("userInfo");
 
