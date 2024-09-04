@@ -1,7 +1,7 @@
 package com.yorizip.myapp.user.controller;
 
 import com.yorizip.myapp.user.vo.UserVO;
-import com.yorizip.myapp.user.service.UserService;
+import com.yorizip.myapp.user.service.UserServiceTemp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -9,18 +9,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Controller
 public class AuthController {
 
-    private final UserService userService;
+    private final UserServiceTemp userServiceTemp;
     private static final Logger log = LoggerFactory.getLogger(AuthController.class);
 
-    public AuthController(UserService userService) {
-        this.userService = userService;
+    public AuthController(UserServiceTemp userServiceTemp) {
+        this.userServiceTemp = userServiceTemp;
     }
 
     @PostMapping("/user/register")
@@ -49,7 +47,7 @@ public class AuthController {
             String profileImgUrl = (String) properties.get("profile_image");
             String socialPlatform = "Kakao";
             log.info("Profile Image URL: {}", profileImgUrl);
-            UserVO user = userService.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
+            UserVO user = userServiceTemp.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
             log.info("UserVO : {}", user);
         } else if (userInfo.containsKey("response")) {
             // 네이버 사용자 정보 처리
@@ -57,7 +55,7 @@ public class AuthController {
             String profileImgUrl = (String) response.get("profile_image");
             String socialPlatform = "Naver";
             log.info("Profile Image URL: {}", profileImgUrl);
-            UserVO user = userService.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
+            UserVO user = userServiceTemp.registerUser(userName, password, nickname, userEmail, phone, profileImgUrl, socialPlatform);
             log.info("UserVO : {}", user);
         }
         return "redirect:/login/login.jsp";
@@ -82,7 +80,7 @@ public class AuthController {
             return "redirect:/myapp/join/join.jsp";
         }
 
-        UserVO user = userService.registerUserNo(userName, password, nickname, userEmail, phone);
+        UserVO user = userServiceTemp.registerUserNo(userName, password, nickname, userEmail, phone);
 
         return "redirect:/login/login.jsp";
     }
@@ -90,8 +88,8 @@ public class AuthController {
     @GetMapping("/auth/login")
     public String login(HttpSession session, @RequestParam String email, @RequestParam String password) {
         try {
-            UserVO user = userService.getUserByEmailLogin(email);
-            Long userId = userService.getUserIdByEmail(email).getId();
+            UserVO user = userServiceTemp.getUserByEmailLogin(email);
+            Long userId = userServiceTemp.getUserIdByEmail(email).getId();
             session.setAttribute("user", user);
             session.setAttribute("userId", userId);
             log.info("user has been stored in session: {}", session.getAttribute("user"));
@@ -150,10 +148,10 @@ public class AuthController {
     @GetMapping("/auth/login/kakao")
     public String kakaoLogin(@RequestParam String code, HttpSession session) {
         try {
-            String accessToken = userService.getKakaoAccessToken(code);
+            String accessToken = userServiceTemp.getKakaoAccessToken(code);
 
             log.info("$$$$$$$$$$$accessToken = {}", accessToken);
-            Map<String, Object> userInfo = userService.getKakaoUserInfo(accessToken);
+            Map<String, Object> userInfo = userServiceTemp.getKakaoUserInfo(accessToken);
             log.info("$$$$$$$$$$$accessToken = {}", userInfo);
 
             Map<String, Object> kakaoAccount = (Map<String, Object>) userInfo.get("kakao_account");
@@ -162,15 +160,15 @@ public class AuthController {
             String email = (String) kakaoAccount.get("email");
             log.info("$$$$$$$$$$$accessToken = {}", email);
 
-            UserVO user = userService.getUserByEmail(email);
+            UserVO user = userServiceTemp.getUserByEmail(email);
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
-            Long userId = userService.getUserIdByEmail(email).getId();
+            Long userId = userServiceTemp.getUserIdByEmail(email).getId();
             log.info("$$$$$$$$$$$%%%%%%%%%%%%%%%%% = {}", userId);
 
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
-            Boolean isUser = userService.handleKakaoUser(userInfo);
+            Boolean isUser = userServiceTemp.handleKakaoUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
             session.setAttribute("userId", userId);
@@ -194,11 +192,11 @@ public class AuthController {
     @GetMapping("/auth/login/naver")
     public String naverLogin(@RequestParam String code, HttpSession session) {
         try {
-            String accessToken = userService.getNaverAccessToken(code);
+            String accessToken = userServiceTemp.getNaverAccessToken(code);
             log.info("$$$$$$$$$$$accessToken = {}", accessToken);
 
 
-            Map<String, Object> userInfo = userService.getNaverUserInfo(accessToken);
+            Map<String, Object> userInfo = userServiceTemp.getNaverUserInfo(accessToken);
             log.info("$$$$$$$$$$$accessToken = {}", userInfo);
 
             Map<String, Object> response = (Map<String, Object>) userInfo.get("response");
@@ -207,13 +205,13 @@ public class AuthController {
             String email = (String) response.get("email");
             log.info("$$$$$$$$$$$accessToken = {}", email);
 
-            UserVO user = userService.getUserByEmail(email);
+            UserVO user = userServiceTemp.getUserByEmail(email);
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
-            Long userId = userService.getUserIdByEmail(email).getId();
+            Long userId = userServiceTemp.getUserIdByEmail(email).getId();
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
-            Boolean isUser = userService.handleNaverUser(userInfo);
+            Boolean isUser = userServiceTemp.handleNaverUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
             session.setAttribute("userId", userId);
@@ -242,7 +240,7 @@ public class AuthController {
 
         String email = (String) ((Map<String, Object>) userInfo.get("kakao_account")).get("email");
 
-        boolean isPasswordValid = userService.checkPassword(user.getUserEmail(), password);
+        boolean isPasswordValid = userServiceTemp.checkPassword(user.getUserEmail(), password);
 
         if (isPasswordValid) {
             return "redirect:/mypage/mypage_userinfo_next.jsp";
@@ -269,7 +267,7 @@ public class AuthController {
 
         String email = (String) ((Map<String, Object>) userInfo.get("kakao_account")).get("email");
 
-        UserVO user = userService.updateUser(userName, nickname, password, profileImgUrl, email);
+        UserVO user = userServiceTemp.updateUser(userName, nickname, password, profileImgUrl, email);
 
         session.setAttribute("user", user);
 
