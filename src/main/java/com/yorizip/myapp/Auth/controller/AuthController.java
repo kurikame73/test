@@ -14,6 +14,6 @@ public class AuthController {
 
     @GetMapping("/auth/kakao")
     public String kakaoAuth() {
-        return authService.getKakaoAuthUrl();
+        return "redirect:" + authService.getKakaoAuthUrl();
     }
 }
