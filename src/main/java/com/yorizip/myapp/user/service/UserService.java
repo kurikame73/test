@@ -24,6 +24,8 @@ public class UserService {
     public void registerUser(UserRegisterRequestDto userDto) {
         log.info("UserService.registerUser + {}", userDto);
         Map<String, Object> userInfo = (Map<String, Object>) httpSession.getAttribute("userInfo");
+        log.info("UserService.registerUser userInfo + {}", userInfo);
+
 
         // 카카오 authProviderID = 1
         if (userInfo.containsKey("properties")) {

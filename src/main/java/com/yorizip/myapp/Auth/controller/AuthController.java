@@ -43,6 +43,6 @@ public class AuthController {
     public String naverLogin(@RequestParam String code) {
         return authService.processLogin(code, "naver")
                 ? "redirect:/main/main.jsp" // 가입된 회원이 존재할 경우
-                : "redirect:/join/joinNaver.jsp"; // 가입된 회원이 없을 경우
+                : "redirect:/join/joinKakao.jsp"; // 가입된 회원이 없을 경우
     }
 }

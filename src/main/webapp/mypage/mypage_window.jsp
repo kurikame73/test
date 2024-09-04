@@ -21,7 +21,7 @@
                 <h4><c:out value="${sessionScope.user.userName}"/></h4>
                 <button class="close-btn" onclick="closeModal()">X</button>
             </div>
-            <p>닉네임</p>
+            <p><c:out value="${sessionScope.user.nickname}"/></p>
             <hr>
             <hr>
             <div class="modal-menu">

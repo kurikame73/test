@@ -64,6 +64,7 @@ public class AuthService {
 
         log.info("Fetching user info from provider: {}", provider);
         Map<String, Object> userInfo = oauthService.getUserInfo(accessToken);
+        httpSession.setAttribute("userInfo", userInfo);
         log.info("Received user info: {}", userInfo);
 
         boolean isUserHandled = oauthService.handleUser(userInfo, provider);
