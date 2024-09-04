@@ -5,7 +5,7 @@ import java.util.Map;
 public interface OAuthService {
     String getAccessToken(String code);
     Map<String, Object> getUserInfo(String accessToken);
-    Boolean handleUser(Map<String, Object> userInfo);
+    Boolean handleUser(Map<String, Object> userInfo, String provider);
     String getAuthUrl();
 }
 

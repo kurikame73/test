@@ -20,8 +20,29 @@ public class AuthController {
 
     @GetMapping("/auth/login/kakao")
     public String kakaoLogin(@RequestParam String code) {
-        return authService.processKakaoLogin(code)
-                ? "redirect:/main/main.jsp" // 가입된 회원이 존재
-                : "redirect:/join/joinKakao.jsp"; // 하지 않을경우
+        log.info("Received Kakao login request with code: {}", code);
+
+        boolean isUserExists = authService.processLogin(code, "kakao");
+
+        if (isUserExists) {
+            log.info("User exists, redirecting to main page");
+            return "redirect:/main/main.jsp";
+        } else {
+            log.info("User does not exist, redirecting to join page");
+            return "redirect:/join/joinKakao.jsp";
+        }
+    }
+
+
+    @GetMapping("/auth/naver")
+    public String naverAuth() {
+        return "redirect:" + authService.getNaverAuthUrl();
+    }
+
+    @GetMapping("/auth/login/naver")
+    public String naverLogin(@RequestParam String code) {
+        return authService.processLogin(code, "naver")
+                ? "redirect:/main/main.jsp" // 가입된 회원이 존재할 경우
+                : "redirect:/join/joinNaver.jsp"; // 가입된 회원이 없을 경우
     }
 }
