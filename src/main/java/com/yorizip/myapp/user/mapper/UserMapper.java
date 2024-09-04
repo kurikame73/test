@@ -9,27 +9,71 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    @Insert("INSERT INTO users (user_name, nickname, hashed_password, phone, user_email, auth_provider_id, profile_image) " +
-            "VALUES (#{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID}, #{profileImgUrl, jdbcType=VARCHAR})")
-    @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
+    @Insert("INSERT INTO KIT5.USERS (USER_ID, USER_NAME, NICKNAME, HASHED_PASSWORD, PHONE, USER_EMAIL, AUTH_PROVIDER_ID, PROFILE_IMAGE) " +
+            "VALUES (#{userId}, #{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID, jdbcType=NUMERIC}, #{profileImgUrl})")
     void insertUser(UserVO user);
 
-    @Select("SELECT user_id, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
-    @ConstructorArgs({
-            @Arg(column = "user_id", javaType = Long.class),  // id 필드를 추가
-            @Arg(column = "userName", javaType = String.class),
-            @Arg(column = "nickname", javaType = String.class),
-            @Arg(column = "hashedPassword", javaType = String.class),
-            @Arg(column = "phone", javaType = String.class),
-            @Arg(column = "userEmail", javaType = String.class),
-            @Arg(column = "authProviderID", javaType = int.class),
-            @Arg(column = "profileImgUrl", javaType = String.class)
-    })
-    UserVO getUserIdByEmail(String userEmail);
 
+//    @Select("SELECT user_id, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
+//    @ConstructorArgs({
+//            @Arg(column = "user_id", javaType = Long.class),  // id 필드를 추가
+//            @Arg(column = "userName", javaType = String.class),
+//            @Arg(column = "nickname", javaType = String.class),
+//            @Arg(column = "hashedPassword", javaType = String.class),
+//            @Arg(column = "phone", javaType = String.class),
+//            @Arg(column = "userEmail", javaType = String.class),
+//            @Arg(column = "authProviderID", javaType = int.class),
+//            @Arg(column = "profileImgUrl", javaType = String.class)
+//    })
+//    UserVO getUserIdByEmail(String userEmail);
+//
+//
+//    @Select("SELECT user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
+//    @ConstructorArgs({
+//            @Arg(column = "userName", javaType = String.class),
+//            @Arg(column = "nickname", javaType = String.class),
+//            @Arg(column = "hashedPassword", javaType = String.class),
+//            @Arg(column = "phone", javaType = String.class),
+//            @Arg(column = "userEmail", javaType = String.class),
+//            @Arg(column = "authProviderID", javaType = int.class),
+//            @Arg(column = "profileImgUrl", javaType = String.class)
+//    })
+//    UserVO getUserByEmail(String userEmail);
+//
+//    @Select("SELECT user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail FROM users WHERE user_email = #{userEmail}")
+//    @ConstructorArgs({
+//            @Arg(column = "userName", javaType = String.class),
+//            @Arg(column = "nickname", javaType = String.class),
+//            @Arg(column = "hashedPassword", javaType = String.class),
+//            @Arg(column = "phone", javaType = String.class),
+//            @Arg(column = "userEmail", javaType = String.class),
+//    })
+//    UserVO getUserByEmailLogin(String userEmail);
+//
+//
+//    @Select("SELECT * FROM users")
+//    List<UserVO> getAllUsers();
+//
+//    @Insert("INSERT INTO social_logins (social_id, social_company, social_login_id, token, user_id) " +
+//            "VALUES (#{socialId}, #{socialCompany}, #{socialLoginId}, #{token}, #{userId})")
+//    void insertSocialLogin(SocialLoginVO socialLogin);
+//
+//    @Insert("INSERT INTO auth_providers (provider_id, provider_name, provider_type) " +
+//            "VALUES (#{providerId}, #{providerName}, #{providerType})")
+//    void insertAuthProvider(AuthProviderVO authProvider);
+//
+//    @Update("UPDATE users SET user_name = #{userName}, nickname = #{nickname}, hashed_password = #{hashedPassword}, profile_image = #{profileImgUrl} WHERE user_email = #{userEmail}")
+//    void updateUser(UserVO user);
+//
+//    @Insert("INSERT INTO user_favorite_recipes (user_id, recipe_id) VALUES (#{userId}, #{recipeId})")
+//    void insertFavoriteRecipe(@Param("userId") Long userId, @Param("recipeId") Long recipeId);
+//
+//    @Select("SELECT recipe_id FROM user_favorite_recipes WHERE user_id = #{userId}")
+//    List<Long> getFavoriteRecipesByUserId(Long userId);
 
-    @Select("SELECT user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
+    @Select("SELECT user_id AS userId, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
     @ConstructorArgs({
+            @Arg(column = "userId", javaType = String.class),
             @Arg(column = "userName", javaType = String.class),
             @Arg(column = "nickname", javaType = String.class),
             @Arg(column = "hashedPassword", javaType = String.class),
@@ -39,36 +83,4 @@ public interface UserMapper {
             @Arg(column = "profileImgUrl", javaType = String.class)
     })
     UserVO getUserByEmail(String userEmail);
-
-    @Select("SELECT user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail FROM users WHERE user_email = #{userEmail}")
-    @ConstructorArgs({
-            @Arg(column = "userName", javaType = String.class),
-            @Arg(column = "nickname", javaType = String.class),
-            @Arg(column = "hashedPassword", javaType = String.class),
-            @Arg(column = "phone", javaType = String.class),
-            @Arg(column = "userEmail", javaType = String.class),
-    })
-    UserVO getUserByEmailLogin(String userEmail);
-
-
-    @Select("SELECT * FROM users")
-    List<UserVO> getAllUsers();
-
-    @Insert("INSERT INTO social_logins (social_id, social_company, social_login_id, token, user_id) " +
-            "VALUES (#{socialId}, #{socialCompany}, #{socialLoginId}, #{token}, #{userId})")
-    void insertSocialLogin(SocialLoginVO socialLogin);
-
-    @Insert("INSERT INTO auth_providers (provider_id, provider_name, provider_type) " +
-            "VALUES (#{providerId}, #{providerName}, #{providerType})")
-    void insertAuthProvider(AuthProviderVO authProvider);
-
-    @Update("UPDATE users SET user_name = #{userName}, nickname = #{nickname}, hashed_password = #{hashedPassword}, profile_image = #{profileImgUrl} WHERE user_email = #{userEmail}")
-    void updateUser(UserVO user);
-
-    @Insert("INSERT INTO user_favorite_recipes (user_id, recipe_id) VALUES (#{userId}, #{recipeId})")
-    void insertFavoriteRecipe(@Param("userId") Long userId, @Param("recipeId") Long recipeId);
-
-    @Select("SELECT recipe_id FROM user_favorite_recipes WHERE user_id = #{userId}")
-    List<Long> getFavoriteRecipesByUserId(Long userId);
-
 }

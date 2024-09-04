@@ -17,11 +17,12 @@ public class UserService {
     private final UserMapper userMapper;
     private final HttpSession httpSession;
 
-    public boolean isEmailExists(String email) {
-        return userMapper.getUserByEmail(email) != null;
+    public UserVO findUserByEmail(String email) {
+        return userMapper.getUserByEmail(email);
     }
 
     public void registerUser(UserRegisterRequestDto userDto) {
+        log.info("UserService.registerUser + {}", userDto);
         Map<String, Object> userInfo = (Map<String, Object>) httpSession.getAttribute("userInfo");
 
         // 카카오 authProviderID = 1

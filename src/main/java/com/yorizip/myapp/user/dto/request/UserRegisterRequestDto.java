@@ -1,10 +1,13 @@
 package com.yorizip.myapp.user.dto.request;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Getter
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserRegisterRequestDto {
     private String userName;
     private String userId;
@@ -13,4 +16,6 @@ public class UserRegisterRequestDto {
     private String nickname;
     private String userEmail;
     private String phone;
+    private boolean privacyAgree;
+    private boolean marketingAgree;
 }

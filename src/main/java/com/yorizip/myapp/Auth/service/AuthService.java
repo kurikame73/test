@@ -9,6 +9,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 import java.util.Optional;
 
@@ -18,6 +19,7 @@ import java.util.Optional;
 public class AuthService {
     private final UserService userService;
     private final RestTemplate restTemplate;
+    private final HttpSession httpSession;
 
     public String getKakaoAuthUrl() {
         String clientId = "920865d3fcdbfd024c9e2f35b102beb6";
@@ -80,10 +82,14 @@ public class AuthService {
         log.info("Email: {}", email);
         log.info("Profile image URL: {}", profileImgUrl);
 
-        // 중복 이메일 체크
+        // 중복 이메일 체크 및 세션 저장
         return Optional.ofNullable(email)
-                .map(userService::isEmailExists)
-                .orElse(false);
+                .map(userService::findUserByEmail) // 이메일로 유저 조회
+                .map(user -> {
+                    httpSession.setAttribute("user", user); // 유저가 존재하면 세션에 저장
+                    return true; // true 반환
+                })
+                .orElse(false); // 유저가 존재하지 않으면 false 반환
     }
 
 
@@ -94,6 +100,7 @@ public class AuthService {
 
         // 2. 사용자 정보 가져오기
         Map<String, Object> userInfo = getKakaoUserInfo(accessToken);
+        httpSession.setAttribute("userInfo", userInfo); // 회원가입
 
         // 3. 사용자 정보 처리
         return handleKakaoUser(userInfo);
