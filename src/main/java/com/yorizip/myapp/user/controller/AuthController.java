@@ -91,8 +91,9 @@ public class AuthController {
     public String login(HttpSession session, @RequestParam String email, @RequestParam String password) {
         try {
             UserVO user = userService.getUserByEmailLogin(email);
-
+            Long userId = userService.getUserIdByEmail(email).getId();
             session.setAttribute("user", user);
+            session.setAttribute("userId", userId);
             log.info("user has been stored in session: {}", session.getAttribute("user"));
             log.info("user has been stored in session: {}", email);
 
@@ -101,6 +102,7 @@ public class AuthController {
                 return "redirect:/main/main.jsp";
             }
             session.setAttribute("user", user);
+            session.setAttribute("userId", userId);
             return "redirect:/join/join.jsp";
         } catch (Exception e) {
             e.printStackTrace();
@@ -163,9 +165,15 @@ public class AuthController {
             UserVO user = userService.getUserByEmail(email);
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
+            Long userId = userService.getUserIdByEmail(email).getId();
+            log.info("$$$$$$$$$$$%%%%%%%%%%%%%%%%% = {}", userId);
+
+            log.info("$$$$$$$$$$$accessToken = {}", user);
+
             Boolean isUser = userService.handleKakaoUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
+            session.setAttribute("userId", userId);
             log.info("$$$$$$$$$$$accessToken = {}", isUser);
 
             log.info("user has been stored in session: {}", session.getAttribute("user"));
@@ -202,9 +210,13 @@ public class AuthController {
             UserVO user = userService.getUserByEmail(email);
             log.info("$$$$$$$$$$$accessToken = {}", user);
 
+            Long userId = userService.getUserIdByEmail(email).getId();
+            log.info("$$$$$$$$$$$accessToken = {}", user);
+
             Boolean isUser = userService.handleNaverUser(userInfo);
             session.setAttribute("userInfo", userInfo);
             session.setAttribute("user", user);
+            session.setAttribute("userId", userId);
             log.info("user has been stored in session: {}", session.getAttribute("user"));
             log.info("userInfo has been stored in session: {}", session.getAttribute("userInfo"));
 

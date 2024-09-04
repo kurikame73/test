@@ -14,6 +14,19 @@ public interface UserMapper {
     @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
     void insertUser(UserVO user);
 
+    @Select("SELECT user_id, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
+    @ConstructorArgs({
+            @Arg(column = "user_id", javaType = Long.class),  // id 필드를 추가
+            @Arg(column = "userName", javaType = String.class),
+            @Arg(column = "nickname", javaType = String.class),
+            @Arg(column = "hashedPassword", javaType = String.class),
+            @Arg(column = "phone", javaType = String.class),
+            @Arg(column = "userEmail", javaType = String.class),
+            @Arg(column = "authProviderID", javaType = int.class),
+            @Arg(column = "profileImgUrl", javaType = String.class)
+    })
+    UserVO getUserIdByEmail(String userEmail);
+
 
     @Select("SELECT user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
     @ConstructorArgs({

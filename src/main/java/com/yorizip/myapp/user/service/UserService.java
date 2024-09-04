@@ -26,7 +26,7 @@ public class UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Transactional
-    public Long saveUser(UserVO user) {
+    public String saveUser(UserVO user) {
         userMapper.insertUser(user);
         return user.getUserId();
     }
@@ -49,6 +49,10 @@ public class UserService {
 
     public UserVO getUserByEmail(String email) {
        return userMapper.getUserByEmail(email);
+    }
+
+    public UserVO getUserIdByEmail(String email) {
+        return userMapper.getUserIdByEmail(email);
     }
 
     public UserVO getUserByEmailLogin(String email) {
@@ -242,7 +246,7 @@ public class UserService {
 
         // User 정보 저장
         userMapper.insertUser(user);
-        Long userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
+        String userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
         logger.info("Received 4: {}", userEmail);
 
         // 소셜 로그인 정보 처리
@@ -278,7 +282,7 @@ public class UserService {
 
         // User 정보 저장
         userMapper.insertUser(user);
-        Long userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
+        String userId = user.getUserId(); // DB에 저장된 후, 생성된 userId를 가져옴
         logger.info("Received 4: {}", userEmail);
 
         return user;

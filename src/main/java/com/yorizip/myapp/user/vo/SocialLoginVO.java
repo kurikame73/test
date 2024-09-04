@@ -5,13 +5,13 @@ public class SocialLoginVO {
     private String socialCompany;
     private String socialLoginId;
     private String token;
-    private Long userId; // 사용자 ID
+    private String userId; // 사용자 ID
 
     // 기본 생성자
     public SocialLoginVO() {}
 
     // 필드 생성자
-    public SocialLoginVO(int socialId, String socialCompany, String socialLoginId, String token, Long userId) {
+    public SocialLoginVO(int socialId, String socialCompany, String socialLoginId, String token, String userId) {
         this.socialId = socialId;
         this.socialCompany = socialCompany;
         this.socialLoginId = socialLoginId;
@@ -52,11 +52,11 @@ public class SocialLoginVO {
         this.token = token;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
