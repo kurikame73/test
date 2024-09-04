@@ -2,7 +2,6 @@ package com.yorizip.myapp.user.controller;
 
 import com.yorizip.myapp.user.dto.request.UserRegisterRequestDto;
 import com.yorizip.myapp.user.service.UserService;
-import com.yorizip.myapp.user.service.UserServiceTemp;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,7 @@ public class UserController {
     public String registerUser(@RequestBody UserRegisterRequestDto dto,
                                Model model)
     {
-        // TODO: 메서드 빼놓기, 서비스레이어 익셉션핸들러 구현
+        // TODO: 서비스레이어로 메서드 빼놓기, 서비스레이어 익셉션핸들러 구현
         if (!dto.getPassword().equals(dto.getPasswordConfirm())) {
             model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
             return "redirect:/myapp/join/joinKakao.jsp";
