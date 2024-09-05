@@ -76,4 +76,18 @@ public class UserController {
         // 성공 시 마이페이지로 리다이렉트
         return "redirect:/mypage";
     }
+
+    @PostMapping("/user/register/no")
+    public String registerUserNo(@ModelAttribute UserRegisterRequestDto dto) {
+        log.info("UserController.registerUser + {}", dto);
+        // TODO: 서비스레이어로 메서드 빼놓기, 서비스레이어 익셉션핸들러 구현
+        if (!dto.getPassword().equals(dto.getPasswordConfirm())) {
+            log.info("비밀번호가 일치하지 않습니다 + {}", dto);
+            return "redirect:/join/join.jsp";
+        }
+
+        log.info("UserController.registerUser userService.registerUser + {}", dto);
+        userService.registerUserNo(dto);
+        return "redirect:/login/login.jsp";
+    }
 }

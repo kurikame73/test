@@ -13,6 +13,10 @@ public interface UserMapper {
             "VALUES (#{userId}, #{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID, jdbcType=NUMERIC}, #{profileImgUrl})")
     void insertUser(UserVO user);
 
+    @Insert("INSERT INTO KIT5.USERS (USER_ID, USER_NAME, NICKNAME, HASHED_PASSWORD, PHONE, USER_EMAIL, AUTH_PROVIDER_ID, PROFILE_IMAGE) " +
+            "VALUES (#{userId}, #{userName}, #{nickname}, #{hashedPassword}, #{phone}, #{userEmail}, #{authProviderID, jdbcType=NUMERIC}, #{profileImgUrl})")
+    void insertUserNo(UserVO user);
+
 
 //    @Select("SELECT user_id, user_name AS userName, nickname, hashed_password AS hashedPassword, phone, user_email AS userEmail, auth_provider_id AS authProviderID, profile_image AS profileImgUrl FROM users WHERE user_email = #{userEmail}")
 //    @ConstructorArgs({

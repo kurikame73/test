@@ -34,6 +34,15 @@ public class UserVO {
         this.profileImgUrl = profileImgUrl;
     }
 
+    public UserVO(String userName, String userId, String nickname, String hashedPassword, String phone, String userEmail) {
+        this.userName = userName;
+        this.userId = userId;
+        this.nickname = nickname;
+        this.hashedPassword = hashedPassword;
+        this.phone = phone;
+        this.userEmail = userEmail;
+    }
+
     public static UserVO createUser(UserRegisterRequestDto dto,
                                     String profileImgUrl,
                                     int authProviderID) {
@@ -46,6 +55,17 @@ public class UserVO {
                 .userEmail(dto.getUserEmail())
                 .authProviderID(authProviderID)
                 .profileImgUrl(profileImgUrl)
+                .build();
+    }
+
+    public static UserVO createUserNo(UserRegisterRequestDto dto) {
+        return UserVO.builder()
+                .userName(dto.getUserName())
+                .userId(dto.getUserId())
+                .nickname(dto.getNickname())
+                .hashedPassword(dto.getPassword())
+                .phone(dto.getPhone())
+                .userEmail(dto.getUserEmail())
                 .build();
     }
 }

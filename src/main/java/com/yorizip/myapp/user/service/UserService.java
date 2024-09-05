@@ -50,6 +50,16 @@ public class UserService {
         }
     }
 
+    public void registerUserNo(UserRegisterRequestDto userDto) {
+        log.info("UserService.registerUser + {}", userDto);
+        String hashedPassword = BCrypt.hashpw(userDto.getPassword(), BCrypt.gensalt());
+        userDto.setPassword(hashedPassword);
+        Map<String, Object> userInfo = (Map<String, Object>) httpSession.getAttribute("userInfo");
+        log.info("UserService.registerUser userInfo + {}", userInfo);
+
+        userMapper.insertUser(UserVO.createUser(userDto,"test", 1));
+    }
+
     public boolean checkPassword(String email, String rawPassword) {
         UserVO user = userMapper.getUserByEmail(email);
         log.info("Received userVO: {}", user);
