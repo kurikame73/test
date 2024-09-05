@@ -42,9 +42,10 @@ public class FavoriteController {
         // 모델에 데이터를 추가하여 JSP 페이지로 전달
         model.addAttribute("favoriteRecipes", favoriteRecipes);
 
-        // 리다이렉트할 뷰의 이름을 반환 (스크랩 레시피 JSP 페이지로 리다이렉트)
-        return "redirect:/mypage/mypage_recipe.jsp"; // favorite_recipes.jsp로 리다이렉트
+        // JSP 페이지로 이동
+        return "mypage/mypage_recipe";
     }
+
 
     // 사용자가 찜한 레시피를 삭제하는 API
     @DeleteMapping("/{userId}/favorite")
