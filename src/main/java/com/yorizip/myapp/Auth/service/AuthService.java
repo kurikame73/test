@@ -25,7 +25,7 @@ public class AuthService {
     private final NaverAuthService naverAuthService;
 
     public String getKakaoAuthUrl() {
-        String clientId = "920865d3fcdbfd024c9e2f35b102beb6";
+        String clientId = "702ef8fdedc106e5f694e13bbe7538e1";
         String redirectUri = "http://localhost:8888/myapp/auth/login/kakao";
 
         return "https://kauth.kakao.com/oauth/authorize"
@@ -35,7 +35,7 @@ public class AuthService {
     }
 
     public String getNaverAuthUrl() {
-        String clientId = "tsCjaf_Sguy3on43jxmt";
+        String clientId = "8njUNhQJZagPjfuWz7OM";
         String redirectUri = "http://localhost:8888/myapp/auth/login/naver";
         String state = "";
 

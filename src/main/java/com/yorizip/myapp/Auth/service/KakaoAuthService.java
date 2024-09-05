@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 @Service
 @Slf4j
 public class KakaoAuthService extends AbstractOAuthService {
-    private final String clientId = "920865d3fcdbfd024c9e2f35b102beb6";
+    private final String clientId = "702ef8fdedc106e5f694e13bbe7538e1";
     private final String redirectUri = "http://localhost:8888/myapp/auth/login/kakao";
 
     public KakaoAuthService(UserService userService, RestTemplate restTemplate, HttpSession httpSession) {

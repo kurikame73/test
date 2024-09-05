@@ -13,8 +13,8 @@ import javax.servlet.http.HttpSession;
 @Service
 @Slf4j
 public class NaverAuthService extends AbstractOAuthService {
-    private final String clientId = "tsCjaf_Sguy3on43jxmt";
-    private final String clientSecret = "F5BCjIhXHv";
+    private final String clientId = "8njUNhQJZagPjfuWz7OM";
+    private final String clientSecret = "cRub2eyqIG";
     private final String redirectUri = "http://localhost:8888/myapp/auth/login/naver";
 
     //        String clientSecret = "F5BCjIhXHv"; // 실제 클라이언트 시크릿으로 교체
